@@ -79,13 +79,11 @@ function App() {
         />
       </main>
 
-      {/* Right detail panel (slides in when neighbourhood selected) */}
-      {selectedNb && (
-        <DetailPanel
-          neighbourhood={selectedNb}
-          onClose={() => setSelectedId(null)}
-        />
-      )}
+      {/* Right detail panel (always mounted; shows empty state when nothing selected) */}
+      <DetailPanel
+        neighbourhood={selectedNb}
+        onClose={() => setSelectedId(null)}
+      />
     </div>
   );
 }
