@@ -74,7 +74,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           counts={tierCounts}
         />
 
-        <details className="group">
+        {/* <details className="group">
           <summary className="text-xs font-medium text-[#64748B] cursor-pointer hover:text-[#0F172A] list-none flex items-center gap-1">
             <span className="group-open:rotate-90 transition-transform inline-block">▸</span>
             Advanced: compare with StatCan deprivation map
@@ -89,7 +89,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             />
             <span className="text-sm text-[#0F172A]">Show official deprivation overlay</span>
           </label>
-        </details>
+        </details> */}
       </div>
 
       {/* Top 10 List */}
