@@ -1,5 +1,6 @@
 import React from 'react';
 import type { ViewMode } from '../types';
+import { MODE_LABELS } from '../data/labels';
 
 interface ModeToggleProps {
   mode: ViewMode;
@@ -8,28 +9,38 @@ interface ModeToggleProps {
 
 export const ModeToggle: React.FC<ModeToggleProps> = ({ mode, onChange }) => {
   return (
-    <div className="flex rounded-lg overflow-hidden border border-[#E2E8F0] bg-[#F8FAFC]">
-      <button
-        onClick={() => onChange('burden')}
-        className={`flex-1 py-2 px-3 text-sm font-medium transition-all duration-150 ${
-          mode === 'burden'
-            ? 'bg-accent text-white shadow-sm'
-            : 'text-[#64748B] hover:text-[#0F172A] hover:bg-white'
-        }`}
-        style={{ backgroundColor: mode === 'burden' ? '#DC2626' : undefined }}
-      >
-        🔴 Burden Mode
-      </button>
-      <button
-        onClick={() => onChange('decision')}
-        className={`flex-1 py-2 px-3 text-sm font-medium transition-all duration-150 ${
-          mode === 'decision'
-            ? 'bg-[#8B5CF6] text-white shadow-sm'
-            : 'text-[#64748B] hover:text-[#0F172A] hover:bg-white'
-        }`}
-      >
-        🟣 Decision Mode
-      </button>
+    <div className="space-y-2">
+      <div className="flex rounded-xl overflow-hidden border-2 border-[#E2E8F0] bg-[#F8FAFC] p-0.5">
+        <button
+          type="button"
+          onClick={() => onChange('burden')}
+          className={`flex-1 py-2.5 px-2 text-sm font-semibold rounded-lg transition-all duration-150 ${
+            mode === 'burden'
+              ? 'text-white shadow-md'
+              : 'text-[#64748B] hover:bg-white hover:text-[#0F172A]'
+          }`}
+          style={{ backgroundColor: mode === 'burden' ? '#DC2626' : undefined }}
+          aria-pressed={mode === 'burden'}
+        >
+          Who needs help?
+        </button>
+        <button
+          type="button"
+          onClick={() => onChange('decision')}
+          className={`flex-1 py-2.5 px-2 text-sm font-semibold rounded-lg transition-all duration-150 ${
+            mode === 'decision'
+              ? 'text-white shadow-md'
+              : 'text-[#64748B] hover:bg-white hover:text-[#0F172A]'
+          }`}
+          style={{ backgroundColor: mode === 'decision' ? '#8B5CF6' : undefined }}
+          aria-pressed={mode === 'decision'}
+        >
+          Which programs?
+        </button>
+      </div>
+      <p className="text-xs text-[#64748B] leading-relaxed">
+        {MODE_LABELS[mode].hint}
+      </p>
     </div>
   );
 };

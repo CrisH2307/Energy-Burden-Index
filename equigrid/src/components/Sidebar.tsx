@@ -3,7 +3,7 @@ import type { Neighbourhood, Tier, ViewMode } from '../types';
 import { ModeToggle } from './ModeToggle';
 import { TierFilter } from './TierFilter';
 import { TIER_COLORS, PROGRAM_COLORS } from '../data/constants';
-import { burdenColor } from '../utils/colors';
+import { TIER_LABELS } from '../data/labels';
 
 interface SidebarProps {
   data: Neighbourhood[];
@@ -52,19 +52,20 @@ export const Sidebar: React.FC<SidebarProps> = ({
           <h1 className="text-lg font-bold text-[#0F172A] tracking-tight">EquiGrid</h1>
         </div>
         <p className="text-xs text-[#64748B] leading-relaxed">
-          Energy Burden Index — Toronto's 158 Neighbourhoods
+          Find where Toronto households need energy help most — click the map to start.
+        </p>
+      </div>
+
+      {/* How to use */}
+      <div className="mx-4 mt-3 px-3 py-2.5 rounded-lg bg-[#F0F9FF] border border-[#BAE6FD] flex-shrink-0">
+        <p className="text-xs text-[#0369A1] leading-relaxed">
+          <strong className="font-semibold">How to use:</strong> Pick colours below, then click any area on the map. Details appear on the right.
         </p>
       </div>
 
       {/* Controls */}
       <div className="px-4 py-4 space-y-4 border-b border-[#E2E8F0] flex-shrink-0">
-        {/* Mode Toggle */}
-        <div>
-          <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider mb-2">
-            View Mode
-          </p>
-          <ModeToggle mode={mode} onChange={onModeChange} />
-        </div>
+        <ModeToggle mode={mode} onChange={onModeChange} />
 
         {/* Tier Filter */}
         <TierFilter
@@ -73,37 +74,31 @@ export const Sidebar: React.FC<SidebarProps> = ({
           counts={tierCounts}
         />
 
-        {/* CIMD Overlay Toggle */}
-        <label className="flex items-center gap-2.5 cursor-pointer select-none py-1">
-          <input
-            type="checkbox"
-            checked={cimdOn}
-            onChange={(e) => onCimdChange(e.target.checked)}
-            className="w-4 h-4 rounded cursor-pointer"
-            style={{ accentColor: '#0284C7' }}
-          />
-          <span className="text-sm text-[#0F172A]">Show CIMD Validation Overlay</span>
-          <span className="ml-auto text-[10px] bg-[#F0F9FF] text-[#0369A1] border border-[#BAE6FD] px-1.5 py-0.5 rounded">
-            M4
-          </span>
-        </label>
-      </div>
-
-      {/* Legend */}
-      <div className="px-4 py-3 border-b border-[#E2E8F0] flex-shrink-0">
-        {mode === 'burden' ? (
-          <BurdenLegend />
-        ) : (
-          <DecisionLegend />
-        )}
+        <details className="group">
+          <summary className="text-xs font-medium text-[#64748B] cursor-pointer hover:text-[#0F172A] list-none flex items-center gap-1">
+            <span className="group-open:rotate-90 transition-transform inline-block">▸</span>
+            Advanced: compare with StatCan deprivation map
+          </summary>
+          <label className="flex items-center gap-2.5 cursor-pointer select-none py-2 mt-1">
+            <input
+              type="checkbox"
+              checked={cimdOn}
+              onChange={(e) => onCimdChange(e.target.checked)}
+              className="w-4 h-4 rounded cursor-pointer"
+              style={{ accentColor: '#0284C7' }}
+            />
+            <span className="text-sm text-[#0F172A]">Show official deprivation overlay</span>
+          </label>
+        </details>
       </div>
 
       {/* Top 10 List */}
       <div className="flex-1 overflow-y-auto sidebar-scroll">
         <div className="px-4 py-3">
-          <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider mb-3">
-            Top Neighbourhoods
+          <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider mb-1">
+            Highest-need areas
           </p>
+          <p className="text-[11px] text-[#94A3B8] mb-3">Tap a name to jump there on the map</p>
           <div className="space-y-1.5">
             {top10.map((nb) => (
               <NeighbourhoodRow
@@ -125,8 +120,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
       {/* Footer */}
       <div className="px-4 py-3 border-t border-[#E2E8F0] flex-shrink-0">
-        <p className="text-[10px] text-[#94A3B8] text-center">
-          EBI = 0.35×Income + 0.25×Renter + 0.25×kWh + 0.15×Age
+        <p className="text-[10px] text-[#94A3B8] text-center leading-relaxed">
+          Red areas = urgent need · Orange = elevated · Teal = moderate
         </p>
       </div>
     </aside>
@@ -134,58 +129,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
 };
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
-
-const BurdenLegend: React.FC = () => (
-  <div>
-    <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider mb-2">
-      Burden Scale
-    </p>
-    <div className="flex items-center gap-2">
-      <span className="text-xs text-[#64748B]">Low</span>
-      <div
-        className="flex-1 h-3 rounded"
-        style={{ background: 'linear-gradient(to right, #FEE2E2, #DC2626, #991B1B)' }}
-      />
-      <span className="text-xs text-[#64748B]">High</span>
-    </div>
-  </div>
-);
-
-const DecisionLegend: React.FC = () => {
-  const programs = [
-    { key: 'EAP',      label: 'EAP' },
-    { key: 'OESP',     label: 'OESP' },
-    { key: 'LEAP',     label: 'LEAP' },
-    { key: 'MULTIRES', label: 'Multi-Res' },
-    { key: 'SOE_HOME', label: 'Save on Energy' },
-  ] as const;
-
-  return (
-    <div>
-      <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider mb-2">
-        Primary Program
-      </p>
-      <div className="flex flex-wrap gap-1.5">
-        {programs.map(({ key, label }) => {
-          const color = PROGRAM_COLORS[key];
-          return (
-            <span
-              key={key}
-              className="flex items-center gap-1 text-xs px-2 py-0.5 rounded-full font-medium"
-              style={{ backgroundColor: color.light, color: color.text }}
-            >
-              <span
-                className="w-2 h-2 rounded-full flex-shrink-0"
-                style={{ backgroundColor: color.bg }}
-              />
-              {label}
-            </span>
-          );
-        })}
-      </div>
-    </div>
-  );
-};
 
 interface NeighbourhoodRowProps {
   nb: Neighbourhood;
@@ -195,8 +138,9 @@ interface NeighbourhoodRowProps {
 }
 
 const NeighbourhoodRow: React.FC<NeighbourhoodRowProps> = ({ nb, mode, isSelected, onClick }) => {
-  const tierColor = TIER_COLORS[nb.tier];
-  const ebiColor  = burdenColor(nb.ebi);
+  const tierStyle = TIER_COLORS[nb.tier];
+  const dotColor =
+    mode === 'burden' ? tierStyle.bg : PROGRAM_COLORS[nb.primaryKey].bg;
   const programColor = PROGRAM_COLORS[nb.primaryKey];
 
   return (
@@ -216,23 +160,18 @@ const NeighbourhoodRow: React.FC<NeighbourhoodRowProps> = ({ nb, mode, isSelecte
         {/* Colour dot */}
         <span
           className="w-2.5 h-2.5 rounded-full flex-shrink-0"
-          style={{ backgroundColor: mode === 'burden' ? ebiColor : programColor.bg }}
+          style={{ backgroundColor: dotColor }}
         />
         {/* Name */}
         <span className="text-sm font-semibold text-[#0F172A] truncate flex-1">{nb.name}</span>
-        {/* EBI score */}
-        <span className="text-xs font-mono font-bold text-[#DC2626] flex-shrink-0">
-          {nb.ebi.toFixed(3)}
+        <span
+          className="text-[10px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0"
+          style={{ backgroundColor: tierStyle.light, color: tierStyle.text }}
+        >
+          {TIER_LABELS[nb.tier].short}
         </span>
       </div>
       <div className="flex items-center gap-1.5 pl-7">
-        {/* Tier badge */}
-        <span
-          className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full"
-          style={{ backgroundColor: tierColor.light, color: tierColor.text }}
-        >
-          {nb.tier}
-        </span>
         {/* Program badge */}
         <span
           className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full"
@@ -240,11 +179,10 @@ const NeighbourhoodRow: React.FC<NeighbourhoodRowProps> = ({ nb, mode, isSelecte
         >
           {programColor.name}
         </span>
-        {/* EBI bar */}
         <div className="flex-1 h-1.5 bg-[#F1F5F9] rounded-full overflow-hidden ml-1">
           <div
             className="h-full rounded-full"
-            style={{ width: `${nb.ebi * 100}%`, backgroundColor: ebiColor }}
+            style={{ width: `${nb.ebi * 100}%`, backgroundColor: tierStyle.bg }}
           />
         </div>
       </div>
