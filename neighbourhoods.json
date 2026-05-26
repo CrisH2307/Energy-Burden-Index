@@ -1,0 +1,5532 @@
+[
+  {
+    "id": 4,
+    "name": "Rexdale-Kipling",
+    "rank": 1,
+    "ebi_score": 0.757,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8872,
+      "renter": 0.5143,
+      "consumption": 0.7695,
+      "age": 0.8392
+    },
+    "raw": {
+      "est_kwh": 12243,
+      "renter_pct": 0.4956,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 121,
+    "name": "Oakridge",
+    "rank": 2,
+    "ebi_score": 0.741,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.9783,
+      "renter": 0.7574,
+      "consumption": 0.4299,
+      "age": 0.6754
+    },
+    "raw": {
+      "est_kwh": 9413,
+      "renter_pct": 0.6924,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 157,
+    "name": "Bendale South",
+    "rank": 3,
+    "ebi_score": 0.734,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8959,
+      "renter": 0.3126,
+      "consumption": 0.861,
+      "age": 0.8464
+    },
+    "raw": {
+      "est_kwh": 13006,
+      "renter_pct": 0.3323,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 112,
+    "name": "Beechborough-Greenbrook",
+    "rank": 4,
+    "ebi_score": 0.729,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8785,
+      "renter": 0.7264,
+      "consumption": 0.5335,
+      "age": 0.7127
+    },
+    "raw": {
+      "est_kwh": 10277,
+      "renter_pct": 0.6673,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 141,
+    "name": "Golfdale-Cedarbrae-Woburn",
+    "rank": 5,
+    "ebi_score": 0.724,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.9393,
+      "renter": 0.5219,
+      "consumption": 0.6274,
+      "age": 0.7205
+    },
+    "raw": {
+      "est_kwh": 11059,
+      "renter_pct": 0.5017,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Black Creek",
+    "rank": 6,
+    "ebi_score": 0.722,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.9783,
+      "renter": 0.7342,
+      "consumption": 0.391,
+      "age": 0.6521
+    },
+    "raw": {
+      "est_kwh": 9089,
+      "renter_pct": 0.6736,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Rustic",
+    "rank": 7,
+    "ebi_score": 0.72,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.9349,
+      "renter": 0.6724,
+      "consumption": 0.5052,
+      "age": 0.658
+    },
+    "raw": {
+      "est_kwh": 10041,
+      "renter_pct": 0.6236,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 55,
+    "name": "Thorncliffe Park",
+    "rank": 8,
+    "ebi_score": 0.71,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.9783,
+      "renter": 0.9634,
+      "consumption": 0.1678,
+      "age": 0.5626
+    },
+    "raw": {
+      "est_kwh": 7229,
+      "renter_pct": 0.8592,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 119,
+    "name": "Wexford/Maryvale",
+    "rank": 9,
+    "ebi_score": 0.709,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8525,
+      "renter": 0.4102,
+      "consumption": 0.765,
+      "age": 0.7784
+    },
+    "raw": {
+      "est_kwh": 12206,
+      "renter_pct": 0.4113,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 125,
+    "name": "Ionview",
+    "rank": 10,
+    "ebi_score": 0.706,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8785,
+      "renter": 0.6634,
+      "consumption": 0.4801,
+      "age": 0.7504
+    },
+    "raw": {
+      "est_kwh": 9832,
+      "renter_pct": 0.6163,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 107,
+    "name": "Oakwood Village",
+    "rank": 11,
+    "ebi_score": 0.704,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8004,
+      "renter": 0.5145,
+      "consumption": 0.6773,
+      "age": 0.8364
+    },
+    "raw": {
+      "est_kwh": 11475,
+      "renter_pct": 0.4957,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 85,
+    "name": "South Parkdale",
+    "rank": 12,
+    "ebi_score": 0.701,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8525,
+      "renter": 0.9507,
+      "consumption": 0.2701,
+      "age": 0.6521
+    },
+    "raw": {
+      "est_kwh": 8082,
+      "renter_pct": 0.8489,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Thistletown-Beaumond Heights",
+    "rank": 13,
+    "ebi_score": 0.701,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.9046,
+      "renter": 0.3666,
+      "consumption": 0.7372,
+      "age": 0.7233
+    },
+    "raw": {
+      "est_kwh": 11974,
+      "renter_pct": 0.376,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 54,
+    "name": "O`Connor Parkview",
+    "rank": 14,
+    "ebi_score": 0.7,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8004,
+      "renter": 0.5719,
+      "consumption": 0.6484,
+      "age": 0.7649
+    },
+    "raw": {
+      "est_kwh": 11234,
+      "renter_pct": 0.5422,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 154,
+    "name": "Oakdale-Beverley Heights",
+    "rank": 15,
+    "ebi_score": 0.694,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8872,
+      "renter": 0.6033,
+      "consumption": 0.5341,
+      "age": 0.6614
+    },
+    "raw": {
+      "est_kwh": 10282,
+      "renter_pct": 0.5676,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 172,
+    "name": "Dovercourt Village",
+    "rank": 16,
+    "ebi_score": 0.692,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.7918,
+      "renter": 0.4628,
+      "consumption": 0.6515,
+      "age": 0.9083
+    },
+    "raw": {
+      "est_kwh": 11260,
+      "renter_pct": 0.4539,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 109,
+    "name": "Caledonia-Fairbank",
+    "rank": 17,
+    "ebi_score": 0.69,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8091,
+      "renter": 0.3599,
+      "consumption": 0.7878,
+      "age": 0.7991
+    },
+    "raw": {
+      "est_kwh": 12396,
+      "renter_pct": 0.3706,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 110,
+    "name": "Keelesdale-Eglinton West",
+    "rank": 18,
+    "ebi_score": 0.687,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8959,
+      "renter": 0.405,
+      "consumption": 0.6654,
+      "age": 0.7029
+    },
+    "raw": {
+      "est_kwh": 11376,
+      "renter_pct": 0.4071,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 69,
+    "name": "Blake-Jones",
+    "rank": 19,
+    "ebi_score": 0.685,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.7831,
+      "renter": 0.47,
+      "consumption": 0.6399,
+      "age": 0.8889
+    },
+    "raw": {
+      "est_kwh": 11163,
+      "renter_pct": 0.4597,
+      "dominant_type": "Semi-detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 61,
+    "name": "Taylor Massey",
+    "rank": 20,
+    "ebi_score": 0.684,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.9132,
+      "renter": 0.7212,
+      "consumption": 0.3249,
+      "age": 0.6877
+    },
+    "raw": {
+      "est_kwh": 8538,
+      "renter_pct": 0.6631,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 149,
+    "name": "Parkwoods-O'Connor Hills",
+    "rank": 21,
+    "ebi_score": 0.684,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.7657,
+      "renter": 0.5534,
+      "consumption": 0.6684,
+      "age": 0.7345
+    },
+    "raw": {
+      "est_kwh": 11401,
+      "renter_pct": 0.5272,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 74,
+    "name": "North St. James Town",
+    "rank": 22,
+    "ebi_score": 0.682,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8872,
+      "renter": 1.0,
+      "consumption": 0.1631,
+      "age": 0.5407
+    },
+    "raw": {
+      "est_kwh": 7190,
+      "renter_pct": 0.8888,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 111,
+    "name": "Rockcliffe-Smythe",
+    "rank": 23,
+    "ebi_score": 0.682,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8698,
+      "renter": 0.4436,
+      "consumption": 0.6016,
+      "age": 0.7732
+    },
+    "raw": {
+      "est_kwh": 10844,
+      "renter_pct": 0.4383,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 57,
+    "name": "Broadview North",
+    "rank": 24,
+    "ebi_score": 0.674,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.7744,
+      "renter": 0.7557,
+      "consumption": 0.4229,
+      "age": 0.7231
+    },
+    "raw": {
+      "est_kwh": 9355,
+      "renter_pct": 0.691,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 18,
+    "name": "New Toronto",
+    "rank": 25,
+    "ebi_score": 0.674,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8004,
+      "renter": 0.5965,
+      "consumption": 0.568,
+      "age": 0.6825
+    },
+    "raw": {
+      "est_kwh": 10564,
+      "renter_pct": 0.5621,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 80,
+    "name": "Palmerston-Little Italy",
+    "rank": 26,
+    "ebi_score": 0.673,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.679,
+      "renter": 0.6257,
+      "consumption": 0.5647,
+      "age": 0.9212
+    },
+    "raw": {
+      "est_kwh": 10537,
+      "renter_pct": 0.5858,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Maple Leaf",
+    "rank": 27,
+    "ebi_score": 0.673,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8091,
+      "renter": 0.4632,
+      "consumption": 0.6771,
+      "age": 0.6982
+    },
+    "raw": {
+      "est_kwh": 11473,
+      "renter_pct": 0.4542,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 124,
+    "name": "Kennedy Park",
+    "rank": 28,
+    "ebi_score": 0.672,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.9219,
+      "renter": 0.4931,
+      "consumption": 0.5107,
+      "age": 0.6583
+    },
+    "raw": {
+      "est_kwh": 10087,
+      "renter_pct": 0.4784,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Brookhaven-Amesbury",
+    "rank": 29,
+    "ebi_score": 0.672,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8698,
+      "renter": 0.6313,
+      "consumption": 0.4602,
+      "age": 0.6324
+    },
+    "raw": {
+      "est_kwh": 9666,
+      "renter_pct": 0.5903,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 113,
+    "name": "Weston",
+    "rank": 30,
+    "ebi_score": 0.672,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8612,
+      "renter": 0.6991,
+      "consumption": 0.403,
+      "age": 0.6331
+    },
+    "raw": {
+      "est_kwh": 9189,
+      "renter_pct": 0.6452,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Glenfield-Jane Heights",
+    "rank": 31,
+    "ebi_score": 0.67,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.9566,
+      "renter": 0.4975,
+      "consumption": 0.4491,
+      "age": 0.6542
+    },
+    "raw": {
+      "est_kwh": 9573,
+      "renter_pct": 0.482,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 123,
+    "name": "Cliffcrest",
+    "rank": 32,
+    "ebi_score": 0.669,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.7918,
+      "renter": 0.3542,
+      "consumption": 0.7869,
+      "age": 0.7131
+    },
+    "raw": {
+      "est_kwh": 12388,
+      "renter_pct": 0.366,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 106,
+    "name": "Humewood-Cedarvale",
+    "rank": 33,
+    "ebi_score": 0.668,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.6356,
+      "renter": 0.684,
+      "consumption": 0.5957,
+      "age": 0.8376
+    },
+    "raw": {
+      "est_kwh": 10795,
+      "renter_pct": 0.633,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 43,
+    "name": "Victoria Village",
+    "rank": 34,
+    "ebi_score": 0.668,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8785,
+      "renter": 0.6288,
+      "consumption": 0.4236,
+      "age": 0.6481
+    },
+    "raw": {
+      "est_kwh": 9361,
+      "renter_pct": 0.5883,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 58,
+    "name": "Old East York",
+    "rank": 35,
+    "ebi_score": 0.663,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.6529,
+      "renter": 0.325,
+      "consumption": 0.8836,
+      "age": 0.8832
+    },
+    "raw": {
+      "est_kwh": 13194,
+      "renter_pct": 0.3423,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 91,
+    "name": "Weston-Pelham Park",
+    "rank": 36,
+    "ebi_score": 0.663,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8438,
+      "renter": 0.4042,
+      "consumption": 0.5843,
+      "age": 0.8038
+    },
+    "raw": {
+      "est_kwh": 10700,
+      "renter_pct": 0.4064,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 92,
+    "name": "Corso Italia-Davenport",
+    "rank": 37,
+    "ebi_score": 0.661,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.7223,
+      "renter": 0.3557,
+      "consumption": 0.7225,
+      "age": 0.9219
+    },
+    "raw": {
+      "est_kwh": 11852,
+      "renter_pct": 0.3672,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Elms-Old Rexdale",
+    "rank": 38,
+    "ebi_score": 0.661,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8698,
+      "renter": 0.455,
+      "consumption": 0.5608,
+      "age": 0.6815
+    },
+    "raw": {
+      "est_kwh": 10504,
+      "renter_pct": 0.4476,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mount Olive-Silverstone-Jamestown",
+    "rank": 39,
+    "ebi_score": 0.655,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.974,
+      "renter": 0.5692,
+      "consumption": 0.3652,
+      "age": 0.5388
+    },
+    "raw": {
+      "est_kwh": 8874,
+      "renter_pct": 0.54,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 108,
+    "name": "Briar Hill-Belgravia",
+    "rank": 40,
+    "ebi_score": 0.652,
+    "tier": "Critical",
+    "scores": {
+      "income": 0.8091,
+      "renter": 0.5447,
+      "consumption": 0.514,
+      "age": 0.6972
+    },
+    "raw": {
+      "est_kwh": 10114,
+      "renter_pct": 0.5202,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Energy Affordability Program (EAP)",
+        "annual_benefit_per_hh": 1500,
+        "eligibility": "Low-income households (OW/ODSP recipients or household income <$52k)"
+      },
+      "secondary": {
+        "name": "Enbridge Affordable Housing Multi-Residential Program",
+        "annual_benefit_per_hh": 2500,
+        "eligibility": "Multi-unit residential buildings with 5+ units; applied by building owner"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 2250000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 150,
+    "name": "Fenside-Parkwoods",
+    "rank": 41,
+    "ebi_score": 0.651,
+    "tier": "High",
+    "scores": {
+      "income": 0.8351,
+      "renter": 0.7228,
+      "consumption": 0.3337,
+      "age": 0.6322
+    },
+    "raw": {
+      "est_kwh": 8612,
+      "renter_pct": 0.6644,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 135,
+    "name": "Morningside",
+    "rank": 42,
+    "ebi_score": 0.648,
+    "tier": "High",
+    "scores": {
+      "income": 0.8698,
+      "renter": 0.4025,
+      "consumption": 0.5993,
+      "age": 0.6191
+    },
+    "raw": {
+      "est_kwh": 10825,
+      "renter_pct": 0.4051,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Humbermede",
+    "rank": 43,
+    "ebi_score": 0.648,
+    "tier": "High",
+    "scores": {
+      "income": 0.9132,
+      "renter": 0.5704,
+      "consumption": 0.4057,
+      "age": 0.5597
+    },
+    "raw": {
+      "est_kwh": 9212,
+      "renter_pct": 0.541,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Kingsview Village-The Westway",
+    "rank": 44,
+    "ebi_score": 0.645,
+    "tier": "High",
+    "scores": {
+      "income": 0.8698,
+      "renter": 0.4828,
+      "consumption": 0.4722,
+      "age": 0.6787
+    },
+    "raw": {
+      "est_kwh": 9766,
+      "renter_pct": 0.4701,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 136,
+    "name": "West Hill",
+    "rank": 45,
+    "ebi_score": 0.644,
+    "tier": "High",
+    "scores": {
+      "income": 0.8959,
+      "renter": 0.4054,
+      "consumption": 0.5583,
+      "age": 0.5934
+    },
+    "raw": {
+      "est_kwh": 10483,
+      "renter_pct": 0.4074,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 102,
+    "name": "Forest Hill North",
+    "rank": 46,
+    "ebi_score": 0.642,
+    "tier": "High",
+    "scores": {
+      "income": 0.6529,
+      "renter": 0.7044,
+      "consumption": 0.4881,
+      "age": 0.7675
+    },
+    "raw": {
+      "est_kwh": 9898,
+      "renter_pct": 0.6495,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 83,
+    "name": "Dufferin Grove",
+    "rank": 47,
+    "ebi_score": 0.641,
+    "tier": "High",
+    "scores": {
+      "income": 0.731,
+      "renter": 0.6252,
+      "consumption": 0.4482,
+      "age": 0.778
+    },
+    "raw": {
+      "est_kwh": 9566,
+      "renter_pct": 0.5854,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 139,
+    "name": "Scarborough Village",
+    "rank": 48,
+    "ebi_score": 0.641,
+    "tier": "High",
+    "scores": {
+      "income": 0.9132,
+      "renter": 0.5815,
+      "consumption": 0.3568,
+      "age": 0.5773
+    },
+    "raw": {
+      "est_kwh": 8804,
+      "renter_pct": 0.55,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 60,
+    "name": "Woodbine-Lumsden",
+    "rank": 49,
+    "ebi_score": 0.641,
+    "tier": "High",
+    "scores": {
+      "income": 0.6095,
+      "renter": 0.3169,
+      "consumption": 0.8582,
+      "age": 0.8898
+    },
+    "raw": {
+      "est_kwh": 12982,
+      "renter_pct": 0.3358,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 147,
+    "name": "L'Amoreaux West",
+    "rank": 50,
+    "ebi_score": 0.64,
+    "tier": "High",
+    "scores": {
+      "income": 0.9349,
+      "renter": 0.4665,
+      "consumption": 0.4492,
+      "age": 0.5604
+    },
+    "raw": {
+      "est_kwh": 9574,
+      "renter_pct": 0.4569,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 138,
+    "name": "Eglinton East",
+    "rank": 51,
+    "ebi_score": 0.638,
+    "tier": "High",
+    "scores": {
+      "income": 0.8959,
+      "renter": 0.5635,
+      "consumption": 0.3805,
+      "age": 0.5925
+    },
+    "raw": {
+      "est_kwh": 9002,
+      "renter_pct": 0.5354,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 81,
+    "name": "Trinity-Bellwoods",
+    "rank": 52,
+    "ebi_score": 0.637,
+    "tier": "High",
+    "scores": {
+      "income": 0.7397,
+      "renter": 0.4511,
+      "consumption": 0.553,
+      "age": 0.8494
+    },
+    "raw": {
+      "est_kwh": 10439,
+      "renter_pct": 0.4444,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 115,
+    "name": "Mount Dennis",
+    "rank": 53,
+    "ebi_score": 0.637,
+    "tier": "High",
+    "scores": {
+      "income": 0.8612,
+      "renter": 0.5509,
+      "consumption": 0.423,
+      "age": 0.6141
+    },
+    "raw": {
+      "est_kwh": 9356,
+      "renter_pct": 0.5252,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 78,
+    "name": "Kensington-Chinatown",
+    "rank": 54,
+    "ebi_score": 0.637,
+    "tier": "High",
+    "scores": {
+      "income": 0.9132,
+      "renter": 0.7474,
+      "consumption": 0.2304,
+      "age": 0.4852
+    },
+    "raw": {
+      "est_kwh": 7751,
+      "renter_pct": 0.6843,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Newtonbrook West",
+    "rank": 55,
+    "ebi_score": 0.634,
+    "tier": "High",
+    "scores": {
+      "income": 0.9046,
+      "renter": 0.519,
+      "consumption": 0.4488,
+      "age": 0.5044
+    },
+    "raw": {
+      "est_kwh": 9571,
+      "renter_pct": 0.4994,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 79,
+    "name": "University",
+    "rank": 56,
+    "ebi_score": 0.634,
+    "tier": "High",
+    "scores": {
+      "income": 0.679,
+      "renter": 0.657,
+      "consumption": 0.4423,
+      "age": 0.8081
+    },
+    "raw": {
+      "est_kwh": 9517,
+      "renter_pct": 0.6111,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 34,
+    "name": "Bathurst Manor",
+    "rank": 57,
+    "ebi_score": 0.633,
+    "tier": "High",
+    "scores": {
+      "income": 0.8004,
+      "renter": 0.4684,
+      "consumption": 0.5585,
+      "age": 0.6409
+    },
+    "raw": {
+      "est_kwh": 10485,
+      "renter_pct": 0.4584,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 118,
+    "name": "Tam O'Shanter-Sullivan",
+    "rank": 58,
+    "ebi_score": 0.628,
+    "tier": "High",
+    "scores": {
+      "income": 0.9046,
+      "renter": 0.4434,
+      "consumption": 0.4701,
+      "age": 0.5512
+    },
+    "raw": {
+      "est_kwh": 9748,
+      "renter_pct": 0.4382,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 114,
+    "name": "Lambton Baby Point",
+    "rank": 59,
+    "ebi_score": 0.627,
+    "tier": "High",
+    "scores": {
+      "income": 0.5575,
+      "renter": 0.4093,
+      "consumption": 0.7692,
+      "age": 0.9121
+    },
+    "raw": {
+      "est_kwh": 12241,
+      "renter_pct": 0.4106,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 27,
+    "name": "York University Heights",
+    "rank": 60,
+    "ebi_score": 0.624,
+    "tier": "High",
+    "scores": {
+      "income": 0.9132,
+      "renter": 0.5627,
+      "consumption": 0.3577,
+      "age": 0.4937
+    },
+    "raw": {
+      "est_kwh": 8812,
+      "renter_pct": 0.5348,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 122,
+    "name": "Birchcliffe-Cliffside",
+    "rank": 61,
+    "ebi_score": 0.624,
+    "tier": "High",
+    "scores": {
+      "income": 0.6616,
+      "renter": 0.3267,
+      "consumption": 0.7746,
+      "age": 0.7787
+    },
+    "raw": {
+      "est_kwh": 12286,
+      "renter_pct": 0.3437,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 142,
+    "name": "Woburn North",
+    "rank": 62,
+    "ebi_score": 0.623,
+    "tier": "High",
+    "scores": {
+      "income": 0.9132,
+      "renter": 0.4717,
+      "consumption": 0.4128,
+      "age": 0.5517
+    },
+    "raw": {
+      "est_kwh": 9271,
+      "renter_pct": 0.4611,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Willowridge-Martingrove-Richview",
+    "rank": 63,
+    "ebi_score": 0.622,
+    "tier": "High",
+    "scores": {
+      "income": 0.731,
+      "renter": 0.4667,
+      "consumption": 0.6084,
+      "age": 0.6512
+    },
+    "raw": {
+      "est_kwh": 10901,
+      "renter_pct": 0.457,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 126,
+    "name": "Dorset Park",
+    "rank": 64,
+    "ebi_score": 0.622,
+    "tier": "High",
+    "scores": {
+      "income": 0.8959,
+      "renter": 0.3923,
+      "consumption": 0.49,
+      "age": 0.5844
+    },
+    "raw": {
+      "est_kwh": 9914,
+      "renter_pct": 0.3968,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 86,
+    "name": "Roncesvalles",
+    "rank": 65,
+    "ebi_score": 0.622,
+    "tier": "High",
+    "scores": {
+      "income": 0.6269,
+      "renter": 0.5621,
+      "consumption": 0.5262,
+      "age": 0.867
+    },
+    "raw": {
+      "est_kwh": 10216,
+      "renter_pct": 0.5343,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 32,
+    "name": "Englemount-Lawrence",
+    "rank": 66,
+    "ebi_score": 0.621,
+    "tier": "High",
+    "scores": {
+      "income": 0.8091,
+      "renter": 0.603,
+      "consumption": 0.4278,
+      "age": 0.5362
+    },
+    "raw": {
+      "est_kwh": 9396,
+      "renter_pct": 0.5674,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Westminster-Branson",
+    "rank": 67,
+    "ebi_score": 0.62,
+    "tier": "High",
+    "scores": {
+      "income": 0.8872,
+      "renter": 0.646,
+      "consumption": 0.2721,
+      "age": 0.5305
+    },
+    "raw": {
+      "est_kwh": 8098,
+      "renter_pct": 0.6022,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 59,
+    "name": "Danforth-East York",
+    "rank": 68,
+    "ebi_score": 0.619,
+    "tier": "High",
+    "scores": {
+      "income": 0.6095,
+      "renter": 0.2833,
+      "consumption": 0.8093,
+      "age": 0.8848
+    },
+    "raw": {
+      "est_kwh": 12575,
+      "renter_pct": 0.3086,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 155,
+    "name": "Downsview",
+    "rank": 69,
+    "ebi_score": 0.619,
+    "tier": "High",
+    "scores": {
+      "income": 0.8004,
+      "renter": 0.4865,
+      "consumption": 0.5524,
+      "age": 0.5258
+    },
+    "raw": {
+      "est_kwh": 10434,
+      "renter_pct": 0.4731,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Humber Summit",
+    "rank": 70,
+    "ebi_score": 0.617,
+    "tier": "High",
+    "scores": {
+      "income": 0.9393,
+      "renter": 0.2479,
+      "consumption": 0.5334,
+      "age": 0.6219
+    },
+    "raw": {
+      "est_kwh": 10276,
+      "renter_pct": 0.2799,
+      "dominant_type": "Semi-detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 44,
+    "name": "Flemingdon Park",
+    "rank": 71,
+    "ebi_score": 0.616,
+    "tier": "High",
+    "scores": {
+      "income": 0.9566,
+      "renter": 0.6008,
+      "consumption": 0.2,
+      "age": 0.5426
+    },
+    "raw": {
+      "est_kwh": 7498,
+      "renter_pct": 0.5656,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 120,
+    "name": "Clairlea-Birchmount",
+    "rank": 72,
+    "ebi_score": 0.615,
+    "tier": "High",
+    "scores": {
+      "income": 0.8178,
+      "renter": 0.3496,
+      "consumption": 0.6071,
+      "age": 0.5982
+    },
+    "raw": {
+      "est_kwh": 10890,
+      "renter_pct": 0.3622,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 66,
+    "name": "Danforth",
+    "rank": 73,
+    "ebi_score": 0.614,
+    "tier": "High",
+    "scores": {
+      "income": 0.6095,
+      "renter": 0.3555,
+      "consumption": 0.678,
+      "age": 0.9506
+    },
+    "raw": {
+      "est_kwh": 11481,
+      "renter_pct": 0.367,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 65,
+    "name": "Greenwood-Coxwell",
+    "rank": 74,
+    "ebi_score": 0.612,
+    "tier": "High",
+    "scores": {
+      "income": 0.6443,
+      "renter": 0.4077,
+      "consumption": 0.6305,
+      "age": 0.8494
+    },
+    "raw": {
+      "est_kwh": 11085,
+      "renter_pct": 0.4093,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Yorkdale-Glen Park",
+    "rank": 75,
+    "ebi_score": 0.612,
+    "tier": "High",
+    "scores": {
+      "income": 0.8265,
+      "renter": 0.4737,
+      "consumption": 0.5215,
+      "age": 0.4911
+    },
+    "raw": {
+      "est_kwh": 10177,
+      "renter_pct": 0.4627,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 47,
+    "name": "Don Valley Village",
+    "rank": 76,
+    "ebi_score": 0.612,
+    "tier": "High",
+    "scores": {
+      "income": 0.8612,
+      "renter": 0.5116,
+      "consumption": 0.4027,
+      "age": 0.5445
+    },
+    "raw": {
+      "est_kwh": 9187,
+      "renter_pct": 0.4934,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 49,
+    "name": "Bayview Woods-Steeles",
+    "rank": 77,
+    "ebi_score": 0.612,
+    "tier": "High",
+    "scores": {
+      "income": 0.7918,
+      "renter": 0.449,
+      "consumption": 0.5316,
+      "age": 0.5956
+    },
+    "raw": {
+      "est_kwh": 10261,
+      "renter_pct": 0.4427,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 94,
+    "name": "Wychwood",
+    "rank": 78,
+    "ebi_score": 0.609,
+    "tier": "High",
+    "scores": {
+      "income": 0.6703,
+      "renter": 0.5133,
+      "consumption": 0.5293,
+      "age": 0.7573
+    },
+    "raw": {
+      "est_kwh": 10242,
+      "renter_pct": 0.4948,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Stonegate-Queensway",
+    "rank": 79,
+    "ebi_score": 0.604,
+    "tier": "High",
+    "scores": {
+      "income": 0.5662,
+      "renter": 0.3614,
+      "consumption": 0.7991,
+      "age": 0.772
+    },
+    "raw": {
+      "est_kwh": 12490,
+      "renter_pct": 0.3718,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Alderwood",
+    "rank": 80,
+    "ebi_score": 0.603,
+    "tier": "High",
+    "scores": {
+      "income": 0.6356,
+      "renter": 0.1884,
+      "consumption": 0.8704,
+      "age": 0.7744
+    },
+    "raw": {
+      "est_kwh": 13084,
+      "renter_pct": 0.2317,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 50,
+    "name": "Newtonbrook East",
+    "rank": 81,
+    "ebi_score": 0.603,
+    "tier": "High",
+    "scores": {
+      "income": 0.8785,
+      "renter": 0.371,
+      "consumption": 0.5321,
+      "age": 0.4652
+    },
+    "raw": {
+      "est_kwh": 10265,
+      "renter_pct": 0.3796,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 67,
+    "name": "Playter Estates-Danforth",
+    "rank": 82,
+    "ebi_score": 0.602,
+    "tier": "High",
+    "scores": {
+      "income": 0.5488,
+      "renter": 0.5461,
+      "consumption": 0.5669,
+      "age": 0.8787
+    },
+    "raw": {
+      "est_kwh": 10555,
+      "renter_pct": 0.5213,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 1,
+    "name": "West Humber-Clairville",
+    "rank": 83,
+    "ebi_score": 0.597,
+    "tier": "High",
+    "scores": {
+      "income": 0.8872,
+      "renter": 0.3299,
+      "consumption": 0.5479,
+      "age": 0.45
+    },
+    "raw": {
+      "est_kwh": 10397,
+      "renter_pct": 0.3463,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Humber Heights-Westmount",
+    "rank": 84,
+    "ebi_score": 0.591,
+    "tier": "High",
+    "scores": {
+      "income": 0.7397,
+      "renter": 0.3906,
+      "consumption": 0.5598,
+      "age": 0.6293
+    },
+    "raw": {
+      "est_kwh": 10496,
+      "renter_pct": 0.3954,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 129,
+    "name": "Agincourt North",
+    "rank": 85,
+    "ebi_score": 0.59,
+    "tier": "High",
+    "scores": {
+      "income": 0.9653,
+      "renter": 0.1671,
+      "consumption": 0.562,
+      "age": 0.4638
+    },
+    "raw": {
+      "est_kwh": 10514,
+      "renter_pct": 0.2145,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 46,
+    "name": "Pleasant View",
+    "rank": 86,
+    "ebi_score": 0.587,
+    "tier": "High",
+    "scores": {
+      "income": 0.8698,
+      "renter": 0.2379,
+      "consumption": 0.5277,
+      "age": 0.6105
+    },
+    "raw": {
+      "est_kwh": 10228,
+      "renter_pct": 0.2718,
+      "dominant_type": "Semi-detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 48,
+    "name": "Hillcrest Village",
+    "rank": 87,
+    "ebi_score": 0.586,
+    "tier": "High",
+    "scores": {
+      "income": 0.8698,
+      "renter": 0.2417,
+      "consumption": 0.5363,
+      "age": 0.5801
+    },
+    "raw": {
+      "est_kwh": 10300,
+      "renter_pct": 0.2749,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 62,
+    "name": "East End Danforth",
+    "rank": 88,
+    "ebi_score": 0.586,
+    "tier": "High",
+    "scores": {
+      "income": 0.6182,
+      "renter": 0.4626,
+      "consumption": 0.5649,
+      "age": 0.7511
+    },
+    "raw": {
+      "est_kwh": 10538,
+      "renter_pct": 0.4537,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 148,
+    "name": "East L'Amoreaux",
+    "rank": 89,
+    "ebi_score": 0.584,
+    "tier": "High",
+    "scores": {
+      "income": 0.9436,
+      "renter": 0.2116,
+      "consumption": 0.4843,
+      "age": 0.5341
+    },
+    "raw": {
+      "est_kwh": 9867,
+      "renter_pct": 0.2505,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 160,
+    "name": "Mimico-Queensway",
+    "rank": 90,
+    "ebi_score": 0.583,
+    "tier": "High",
+    "scores": {
+      "income": 0.6356,
+      "renter": 0.4817,
+      "consumption": 0.5693,
+      "age": 0.6545
+    },
+    "raw": {
+      "est_kwh": 10575,
+      "renter_pct": 0.4692,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 145,
+    "name": "Malvern West",
+    "rank": 91,
+    "ebi_score": 0.58,
+    "tier": "High",
+    "scores": {
+      "income": 0.9306,
+      "renter": 0.227,
+      "consumption": 0.5231,
+      "age": 0.4429
+    },
+    "raw": {
+      "est_kwh": 10190,
+      "renter_pct": 0.263,
+      "dominant_type": "Row house"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 88,
+    "name": "High Park North",
+    "rank": 92,
+    "ebi_score": 0.577,
+    "tier": "High",
+    "scores": {
+      "income": 0.5662,
+      "renter": 0.7246,
+      "consumption": 0.3751,
+      "age": 0.6939
+    },
+    "raw": {
+      "est_kwh": 8957,
+      "renter_pct": 0.6658,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 68,
+    "name": "North Riverdale",
+    "rank": 93,
+    "ebi_score": 0.572,
+    "tier": "High",
+    "scores": {
+      "income": 0.436,
+      "renter": 0.4171,
+      "consumption": 0.6772,
+      "age": 0.9703
+    },
+    "raw": {
+      "est_kwh": 11474,
+      "renter_pct": 0.4169,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 64,
+    "name": "Woodbine Corridor",
+    "rank": 94,
+    "ebi_score": 0.572,
+    "tier": "High",
+    "scores": {
+      "income": 0.5315,
+      "renter": 0.3976,
+      "consumption": 0.6346,
+      "age": 0.8497
+    },
+    "raw": {
+      "est_kwh": 11119,
+      "renter_pct": 0.4011,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 72,
+    "name": "Regent Park",
+    "rank": 95,
+    "ebi_score": 0.569,
+    "tier": "High",
+    "scores": {
+      "income": 0.8959,
+      "renter": 0.7735,
+      "consumption": 0.1157,
+      "age": 0.2239
+    },
+    "raw": {
+      "est_kwh": 6795,
+      "renter_pct": 0.7054,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 171,
+    "name": "Junction-Wallace Emerson",
+    "rank": 96,
+    "ebi_score": 0.569,
+    "tier": "High",
+    "scores": {
+      "income": 0.7223,
+      "renter": 0.5183,
+      "consumption": 0.4002,
+      "age": 0.5771
+    },
+    "raw": {
+      "est_kwh": 9166,
+      "renter_pct": 0.4988,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 156,
+    "name": "Bendale-Glen Andrew",
+    "rank": 97,
+    "ebi_score": 0.566,
+    "tier": "High",
+    "scores": {
+      "income": 0.8785,
+      "renter": 0.3895,
+      "consumption": 0.3803,
+      "age": 0.4424
+    },
+    "raw": {
+      "est_kwh": 9000,
+      "renter_pct": 0.3945,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Long Branch",
+    "rank": 98,
+    "ebi_score": 0.565,
+    "tier": "High",
+    "scores": {
+      "income": 0.6182,
+      "renter": 0.5163,
+      "consumption": 0.5166,
+      "age": 0.6053
+    },
+    "raw": {
+      "est_kwh": 10136,
+      "renter_pct": 0.4972,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Etobicoke West Mall",
+    "rank": 99,
+    "ebi_score": 0.564,
+    "tier": "High",
+    "scores": {
+      "income": 0.7657,
+      "renter": 0.4453,
+      "consumption": 0.3771,
+      "age": 0.6029
+    },
+    "raw": {
+      "est_kwh": 8973,
+      "renter_pct": 0.4397,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 116,
+    "name": "Steeles",
+    "rank": 100,
+    "ebi_score": 0.564,
+    "tier": "High",
+    "scores": {
+      "income": 0.9826,
+      "renter": 0.1126,
+      "consumption": 0.5355,
+      "age": 0.3845
+    },
+    "raw": {
+      "est_kwh": 10293,
+      "renter_pct": 0.1704,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 130,
+    "name": "Milliken",
+    "rank": 101,
+    "ebi_score": 0.563,
+    "tier": "High",
+    "scores": {
+      "income": 1.0,
+      "renter": 0.0504,
+      "consumption": 0.5857,
+      "age": 0.3631
+    },
+    "raw": {
+      "est_kwh": 10712,
+      "renter_pct": 0.12,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 134,
+    "name": "Highland Creek",
+    "rank": 102,
+    "ebi_score": 0.563,
+    "tier": "High",
+    "scores": {
+      "income": 0.8265,
+      "renter": 0.0714,
+      "consumption": 0.8072,
+      "age": 0.3631
+    },
+    "raw": {
+      "est_kwh": 12557,
+      "renter_pct": 0.137,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 146,
+    "name": "Malvern East",
+    "rank": 103,
+    "ebi_score": 0.563,
+    "tier": "High",
+    "scores": {
+      "income": 0.8959,
+      "renter": 0.2714,
+      "consumption": 0.4836,
+      "age": 0.4047
+    },
+    "raw": {
+      "est_kwh": 9861,
+      "renter_pct": 0.2989,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 128,
+    "name": "Agincourt South-Malvern West",
+    "rank": 104,
+    "ebi_score": 0.557,
+    "tier": "High",
+    "scores": {
+      "income": 0.9219,
+      "renter": 0.2773,
+      "consumption": 0.4258,
+      "age": 0.3878
+    },
+    "raw": {
+      "est_kwh": 9379,
+      "renter_pct": 0.3037,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 90,
+    "name": "Junction Area",
+    "rank": 105,
+    "ebi_score": 0.552,
+    "tier": "High",
+    "scores": {
+      "income": 0.5922,
+      "renter": 0.4209,
+      "consumption": 0.5287,
+      "age": 0.7134
+    },
+    "raw": {
+      "est_kwh": 10237,
+      "renter_pct": 0.42,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Eringate-Centennial-West Deane",
+    "rank": 106,
+    "ebi_score": 0.551,
+    "tier": "High",
+    "scores": {
+      "income": 0.6529,
+      "renter": 0.1015,
+      "consumption": 0.7714,
+      "age": 0.6977
+    },
+    "raw": {
+      "est_kwh": 12259,
+      "renter_pct": 0.1614,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 152,
+    "name": "East Willowdale",
+    "rank": 107,
+    "ebi_score": 0.55,
+    "tier": "High",
+    "scores": {
+      "income": 0.8178,
+      "renter": 0.2753,
+      "consumption": 0.5695,
+      "age": 0.3507
+    },
+    "raw": {
+      "est_kwh": 10577,
+      "renter_pct": 0.3021,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 71,
+    "name": "Cabbagetown-South St. James Town",
+    "rank": 108,
+    "ebi_score": 0.548,
+    "tier": "High",
+    "scores": {
+      "income": 0.6009,
+      "renter": 0.5805,
+      "consumption": 0.3504,
+      "age": 0.6996
+    },
+    "raw": {
+      "est_kwh": 8751,
+      "renter_pct": 0.5492,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 40,
+    "name": "St.Andrew-Windfields",
+    "rank": 109,
+    "ebi_score": 0.543,
+    "tier": "High",
+    "scores": {
+      "income": 0.6095,
+      "renter": 0.3489,
+      "consumption": 0.6475,
+      "age": 0.5381
+    },
+    "raw": {
+      "est_kwh": 11227,
+      "renter_pct": 0.3617,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 100,
+    "name": "Yonge-Eglinton",
+    "rank": 110,
+    "ebi_score": 0.541,
+    "tier": "High",
+    "scores": {
+      "income": 0.4187,
+      "renter": 0.6772,
+      "consumption": 0.4902,
+      "age": 0.6844
+    },
+    "raw": {
+      "est_kwh": 9916,
+      "renter_pct": 0.6275,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 89,
+    "name": "Runnymede-Bloor West Village",
+    "rank": 111,
+    "ebi_score": 0.54,
+    "tier": "High",
+    "scores": {
+      "income": 0.3059,
+      "renter": 0.174,
+      "consumption": 0.9563,
+      "age": 1.0
+    },
+    "raw": {
+      "est_kwh": 13800,
+      "renter_pct": 0.2201,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Edenbridge-Humber Valley",
+    "rank": 112,
+    "ebi_score": 0.537,
+    "tier": "High",
+    "scores": {
+      "income": 0.5662,
+      "renter": 0.4397,
+      "consumption": 0.5563,
+      "age": 0.5975
+    },
+    "raw": {
+      "est_kwh": 10467,
+      "renter_pct": 0.4352,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Pelmo Park-Humberlea",
+    "rank": 113,
+    "ebi_score": 0.534,
+    "tier": "High",
+    "scores": {
+      "income": 0.757,
+      "renter": 0.1325,
+      "consumption": 0.6447,
+      "age": 0.4989
+    },
+    "raw": {
+      "est_kwh": 11203,
+      "renter_pct": 0.1865,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Clanton Park",
+    "rank": 114,
+    "ebi_score": 0.532,
+    "tier": "High",
+    "scores": {
+      "income": 0.705,
+      "renter": 0.4641,
+      "consumption": 0.4297,
+      "age": 0.4146
+    },
+    "raw": {
+      "est_kwh": 9412,
+      "renter_pct": 0.4549,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 167,
+    "name": "Church-Wellesley",
+    "rank": 115,
+    "ebi_score": 0.527,
+    "tier": "High",
+    "scores": {
+      "income": 0.6876,
+      "renter": 0.8376,
+      "consumption": 0.1045,
+      "age": 0.341
+    },
+    "raw": {
+      "est_kwh": 6702,
+      "renter_pct": 0.7573,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 158,
+    "name": "Islington",
+    "rank": 116,
+    "ebi_score": 0.527,
+    "tier": "High",
+    "scores": {
+      "income": 0.6269,
+      "renter": 0.292,
+      "consumption": 0.5845,
+      "age": 0.5892
+    },
+    "raw": {
+      "est_kwh": 10702,
+      "renter_pct": 0.3156,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 140,
+    "name": "Guildwood",
+    "rank": 117,
+    "ebi_score": 0.526,
+    "tier": "High",
+    "scores": {
+      "income": 0.5748,
+      "renter": 0.1722,
+      "consumption": 0.7303,
+      "age": 0.658
+    },
+    "raw": {
+      "est_kwh": 11917,
+      "renter_pct": 0.2186,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Markland Wood",
+    "rank": 118,
+    "ebi_score": 0.525,
+    "tier": "High",
+    "scores": {
+      "income": 0.6009,
+      "renter": 0.2315,
+      "consumption": 0.6051,
+      "age": 0.7003
+    },
+    "raw": {
+      "est_kwh": 10873,
+      "renter_pct": 0.2666,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Ontario Electricity Support Program (OESP)",
+        "annual_benefit_per_hh": 420,
+        "eligibility": "Households below OESP income thresholds (~$52k for 1–2 person households)"
+      },
+      "secondary": {
+        "name": "Low-Income Energy Assistance Program (LEAP)",
+        "annual_benefit_per_hh": 650,
+        "eligibility": "Households unable to pay energy bills, referred by utility or social service"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 630000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 70,
+    "name": "South Riverdale",
+    "rank": 119,
+    "ebi_score": 0.519,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.5575,
+      "renter": 0.4308,
+      "consumption": 0.4654,
+      "age": 0.6654
+    },
+    "raw": {
+      "est_kwh": 9709,
+      "renter_pct": 0.428,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 84,
+    "name": "Little Portugal",
+    "rank": 120,
+    "ebi_score": 0.517,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.6182,
+      "renter": 0.6089,
+      "consumption": 0.2923,
+      "age": 0.5001
+    },
+    "raw": {
+      "est_kwh": 8267,
+      "renter_pct": 0.5722,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 37,
+    "name": "Willowdale West",
+    "rank": 121,
+    "ebi_score": 0.516,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.8004,
+      "renter": 0.4019,
+      "consumption": 0.3321,
+      "age": 0.3496
+    },
+    "raw": {
+      "est_kwh": 8598,
+      "renter_pct": 0.4046,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 173,
+    "name": "North Toronto",
+    "rank": 122,
+    "ebi_score": 0.515,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.6182,
+      "renter": 0.9081,
+      "consumption": 0.1006,
+      "age": 0.3087
+    },
+    "raw": {
+      "est_kwh": 6669,
+      "renter_pct": 0.8144,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 143,
+    "name": "West Rouge",
+    "rank": 123,
+    "ebi_score": 0.512,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.705,
+      "renter": 0.1554,
+      "consumption": 0.6525,
+      "age": 0.4241
+    },
+    "raw": {
+      "est_kwh": 11268,
+      "renter_pct": 0.205,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 38,
+    "name": "Lansing-Westgate",
+    "rank": 124,
+    "ebi_score": 0.509,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.6356,
+      "renter": 0.4382,
+      "consumption": 0.4446,
+      "age": 0.4419
+    },
+    "raw": {
+      "est_kwh": 9536,
+      "renter_pct": 0.434,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Princess-Rosethorn",
+    "rank": 125,
+    "ebi_score": 0.507,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.3406,
+      "renter": 0.0891,
+      "consumption": 1.0,
+      "age": 0.7682
+    },
+    "raw": {
+      "est_kwh": 14164,
+      "renter_pct": 0.1513,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 99,
+    "name": "Mount Pleasant East",
+    "rank": 126,
+    "ebi_score": 0.504,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.3492,
+      "renter": 0.4569,
+      "consumption": 0.6202,
+      "age": 0.7526
+    },
+    "raw": {
+      "est_kwh": 10999,
+      "renter_pct": 0.4491,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 95,
+    "name": "Annex",
+    "rank": 127,
+    "ebi_score": 0.502,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.4967,
+      "renter": 0.6327,
+      "consumption": 0.3103,
+      "age": 0.6189
+    },
+    "raw": {
+      "est_kwh": 8417,
+      "renter_pct": 0.5914,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 73,
+    "name": "Moss Park",
+    "rank": 128,
+    "ebi_score": 0.5,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.6876,
+      "renter": 0.7043,
+      "consumption": 0.1445,
+      "age": 0.3142
+    },
+    "raw": {
+      "est_kwh": 7035,
+      "renter_pct": 0.6494,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 42,
+    "name": "Banbury-Don Mills",
+    "rank": 129,
+    "ebi_score": 0.499,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.6095,
+      "renter": 0.3992,
+      "consumption": 0.432,
+      "age": 0.5172
+    },
+    "raw": {
+      "est_kwh": 9431,
+      "renter_pct": 0.4024,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 53,
+    "name": "Henry Farm",
+    "rank": 130,
+    "ebi_score": 0.498,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.7831,
+      "renter": 0.6533,
+      "consumption": 0.1174,
+      "age": 0.209
+    },
+    "raw": {
+      "est_kwh": 6809,
+      "renter_pct": 0.6081,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 144,
+    "name": "Morningside Heights",
+    "rank": 131,
+    "ebi_score": 0.495,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.8612,
+      "renter": 0.0931,
+      "consumption": 0.6016,
+      "age": 0.1351
+    },
+    "raw": {
+      "est_kwh": 10844,
+      "renter_pct": 0.1546,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 169,
+    "name": "Bay-Cloverhill",
+    "rank": 132,
+    "ebi_score": 0.492,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.757,
+      "renter": 0.7633,
+      "consumption": 0.0446,
+      "age": 0.1665
+    },
+    "raw": {
+      "est_kwh": 6203,
+      "renter_pct": 0.6972,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Bedford Park-Nortown",
+    "rank": 133,
+    "ebi_score": 0.482,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.4447,
+      "renter": 0.2961,
+      "consumption": 0.6787,
+      "age": 0.5536
+    },
+    "raw": {
+      "est_kwh": 11487,
+      "renter_pct": 0.3189,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 87,
+    "name": "High Park-Swansea",
+    "rank": 134,
+    "ebi_score": 0.48,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.3926,
+      "renter": 0.3998,
+      "consumption": 0.5337,
+      "age": 0.7276
+    },
+    "raw": {
+      "est_kwh": 10278,
+      "renter_pct": 0.4029,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 63,
+    "name": "The Beaches",
+    "rank": 135,
+    "ebi_score": 0.478,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.2885,
+      "renter": 0.3547,
+      "consumption": 0.6637,
+      "age": 0.8171
+    },
+    "raw": {
+      "est_kwh": 11362,
+      "renter_pct": 0.3664,
+      "dominant_type": "Apt low-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 56,
+    "name": "Leaside-Bennington",
+    "rank": 136,
+    "ebi_score": 0.478,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.2278,
+      "renter": 0.2438,
+      "consumption": 0.8522,
+      "age": 0.8266
+    },
+    "raw": {
+      "est_kwh": 12932,
+      "renter_pct": 0.2766,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 133,
+    "name": "Centennial Scarborough",
+    "rank": 137,
+    "ebi_score": 0.472,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.5575,
+      "renter": 0.0,
+      "consumption": 0.8444,
+      "age": 0.4379
+    },
+    "raw": {
+      "est_kwh": 12867,
+      "renter_pct": 0.0792,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 101,
+    "name": "Forest Hill South",
+    "rank": 138,
+    "ebi_score": 0.467,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.2798,
+      "renter": 0.5374,
+      "consumption": 0.5257,
+      "age": 0.6856
+    },
+    "raw": {
+      "est_kwh": 10212,
+      "renter_pct": 0.5143,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 103,
+    "name": "Lawrence Park South",
+    "rank": 139,
+    "ebi_score": 0.46,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.1518,
+      "renter": 0.2919,
+      "consumption": 0.8324,
+      "age": 0.8357
+    },
+    "raw": {
+      "est_kwh": 12767,
+      "renter_pct": 0.3155,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 96,
+    "name": "Casa Loma",
+    "rank": 140,
+    "ebi_score": 0.458,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.3145,
+      "renter": 0.5952,
+      "consumption": 0.3965,
+      "age": 0.6661
+    },
+    "raw": {
+      "est_kwh": 9135,
+      "renter_pct": 0.5611,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 105,
+    "name": "Lawrence Park North",
+    "rank": 141,
+    "ebi_score": 0.447,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.141,
+      "renter": 0.2087,
+      "consumption": 0.8915,
+      "age": 0.8174
+    },
+    "raw": {
+      "est_kwh": 13260,
+      "renter_pct": 0.2482,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 168,
+    "name": "Downtown Yonge East",
+    "rank": 142,
+    "ebi_score": 0.445,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.6356,
+      "renter": 0.6919,
+      "consumption": 0.0662,
+      "age": 0.2173
+    },
+    "raw": {
+      "est_kwh": 6383,
+      "renter_pct": 0.6394,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 97,
+    "name": "Yonge-St. Clair",
+    "rank": 143,
+    "ebi_score": 0.444,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.2625,
+      "renter": 0.6482,
+      "consumption": 0.3411,
+      "age": 0.6977
+    },
+    "raw": {
+      "est_kwh": 8673,
+      "renter_pct": 0.604,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 151,
+    "name": "Yonge-Doris",
+    "rank": 144,
+    "ebi_score": 0.442,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.8265,
+      "renter": 0.4505,
+      "consumption": 0.058,
+      "age": 0.1729
+    },
+    "raw": {
+      "est_kwh": 6314,
+      "renter_pct": 0.4439,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 174,
+    "name": "South Eglinton-Davisville",
+    "rank": 145,
+    "ebi_score": 0.442,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.4794,
+      "renter": 0.7612,
+      "consumption": 0.1388,
+      "age": 0.3282
+    },
+    "raw": {
+      "est_kwh": 6988,
+      "renter_pct": 0.6955,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 52,
+    "name": "Bayview Village",
+    "rank": 146,
+    "ebi_score": 0.44,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.679,
+      "renter": 0.4019,
+      "consumption": 0.2555,
+      "age": 0.256
+    },
+    "raw": {
+      "est_kwh": 7960,
+      "renter_pct": 0.4046,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 170,
+    "name": "Yonge-Bay Corridor",
+    "rank": 147,
+    "ebi_score": 0.44,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.6616,
+      "renter": 0.7386,
+      "consumption": 0.0263,
+      "age": 0.1126
+    },
+    "raw": {
+      "est_kwh": 6050,
+      "renter_pct": 0.6772,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 159,
+    "name": "Etobicoke City Centre",
+    "rank": 148,
+    "ebi_score": 0.414,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.6182,
+      "renter": 0.52,
+      "consumption": 0.1405,
+      "age": 0.2192
+    },
+    "raw": {
+      "est_kwh": 7002,
+      "renter_pct": 0.5002,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 98,
+    "name": "Rosedale-Moore Park",
+    "rank": 149,
+    "ebi_score": 0.386,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.1518,
+      "renter": 0.4263,
+      "consumption": 0.4831,
+      "age": 0.7041
+    },
+    "raw": {
+      "est_kwh": 9857,
+      "renter_pct": 0.4243,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 153,
+    "name": "Avondale",
+    "rank": 150,
+    "ebi_score": 0.367,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.6095,
+      "renter": 0.4275,
+      "consumption": 0.1139,
+      "age": 0.1192
+    },
+    "raw": {
+      "est_kwh": 6780,
+      "renter_pct": 0.4253,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Kingsway South",
+    "rank": 151,
+    "ebi_score": 0.353,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.0,
+      "renter": 0.1335,
+      "consumption": 0.8393,
+      "age": 0.7331
+    },
+    "raw": {
+      "est_kwh": 12825,
+      "renter_pct": 0.1873,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 166,
+    "name": "St Lawrence-East Bayfront-The Islands",
+    "rank": 152,
+    "ebi_score": 0.324,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.3579,
+      "renter": 0.6466,
+      "consumption": 0.0581,
+      "age": 0.151
+    },
+    "raw": {
+      "est_kwh": 6315,
+      "renter_pct": 0.6027,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 161,
+    "name": "Humber Bay Shores",
+    "rank": 153,
+    "ebi_score": 0.314,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.462,
+      "renter": 0.4688,
+      "consumption": 0.0508,
+      "age": 0.1472
+    },
+    "raw": {
+      "est_kwh": 6254,
+      "renter_pct": 0.4587,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 165,
+    "name": "Harbourfront-CityPlace",
+    "rank": 154,
+    "ebi_score": 0.287,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.3406,
+      "renter": 0.6433,
+      "consumption": 0.0056,
+      "age": 0.0373
+    },
+    "raw": {
+      "est_kwh": 5878,
+      "renter_pct": 0.6,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 162,
+    "name": "West Queen West",
+    "rank": 155,
+    "ebi_score": 0.271,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.1952,
+      "renter": 0.4644,
+      "consumption": 0.1631,
+      "age": 0.3061
+    },
+    "raw": {
+      "est_kwh": 7190,
+      "renter_pct": 0.4552,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 41,
+    "name": "Bridle Path-Sunnybrook-York Mills",
+    "rank": 156,
+    "ebi_score": 0.258,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.0542,
+      "renter": 0.0445,
+      "consumption": 0.6873,
+      "age": 0.3743
+    },
+    "raw": {
+      "est_kwh": 11558,
+      "renter_pct": 0.1152,
+      "dominant_type": "Single detached"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 163,
+    "name": "Fort York-Liberty Village",
+    "rank": 157,
+    "ebi_score": 0.223,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.2169,
+      "renter": 0.5618,
+      "consumption": 0.0107,
+      "age": 0.0254
+    },
+    "raw": {
+      "est_kwh": 5920,
+      "renter_pct": 0.534,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  },
+  {
+    "id": 164,
+    "name": "Wellington Place",
+    "rank": 158,
+    "ebi_score": 0.223,
+    "tier": "Moderate",
+    "scores": {
+      "income": 0.1627,
+      "renter": 0.6627,
+      "consumption": 0.0,
+      "age": 0.0
+    },
+    "raw": {
+      "est_kwh": 5831,
+      "renter_pct": 0.6157,
+      "dominant_type": "Apt high-rise"
+    },
+    "programs": {
+      "primary": {
+        "name": "Save on Energy Home Renovation Rebate",
+        "annual_benefit_per_hh": 500,
+        "eligibility": "Homeowners undertaking eligible insulation or HVAC efficiency upgrades"
+      },
+      "secondary": {
+        "name": "Smart Thermostat Rebate",
+        "annual_benefit_per_hh": 75,
+        "eligibility": "Any Ontario electricity customer replacing a manual thermostat"
+      }
+    },
+    "impact": {
+      "eligible_households": 1500,
+      "total_annual_benefit": 750000,
+      "uptake_assumption": "30%"
+    }
+  }
+]
