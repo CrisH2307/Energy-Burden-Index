@@ -1,8 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import type { Neighbourhood, Tier, ViewMode, TorontoGeoJSON, TorontoFeature } from '../types';
-import { polygonColors } from '../utils/colors';
+import {
+  burdenColorHex,
+  mapNeighbourhoodStyle,
+  MAP_STROKE_SELECTED,
+} from '../utils/colors';
+import { TIER_LABELS } from '../data/labels';
+import { MapOverlay, useMapHint, type MapHoverInfo } from './MapOverlay';
 
-// ArcGIS Core imports
 import esriConfig from '@arcgis/core/config';
 import EsriMap from '@arcgis/core/Map';
 import MapView from '@arcgis/core/views/MapView';
@@ -11,10 +16,14 @@ import Graphic from '@arcgis/core/Graphic';
 import SimpleFillSymbol from '@arcgis/core/symbols/SimpleFillSymbol';
 import SimpleLineSymbol from '@arcgis/core/symbols/SimpleLineSymbol';
 import Polygon from '@arcgis/core/geometry/Polygon';
-import PopupTemplate from '@arcgis/core/PopupTemplate';
+import type Point from '@arcgis/core/geometry/Point';
+import * as geometryEngine from '@arcgis/core/geometry/geometryEngine';
 
-// Use CDN for ArcGIS assets (avoids bundling 100MB of assets)
-esriConfig.assetsPath = 'https://js.arcgis.com/4.29/@arcgis/core/assets';
+// Must match installed @arcgis/core major version (package.json: ^5.x)
+esriConfig.assetsPath = 'https://js.arcgis.com/5.0/@arcgis/core/assets';
+
+const TORONTO_CENTER: [number, number] = [-79.38, 43.72];
+const CITY_ZOOM = 10;
 
 interface MapViewProps {
   data: Neighbourhood[];
@@ -26,11 +35,126 @@ interface MapViewProps {
   cimdOn: boolean;
 }
 
-// Build a lookup map for fast O(1) joins
 function buildLookup(data: Neighbourhood[]): globalThis.Map<number, Neighbourhood> {
   const m = new globalThis.Map<number, Neighbourhood>();
   data.forEach((n) => m.set(n.id, n));
   return m;
+}
+
+/** Join key: GeoJSON AREA_SHORT_CODE (may be zero-padded) → neighbourhoods id */
+function featureToNbId(areaShortCode: string): number {
+  return parseInt(areaShortCode, 10);
+}
+
+function polygonsFromFeature(feature: TorontoFeature): Polygon[] {
+  const sr = { wkid: 4326 };
+  const { geometry } = feature;
+
+  if (geometry.type === 'Polygon') {
+    return [
+      new Polygon({
+        rings: geometry.coordinates as number[][][],
+        spatialReference: sr,
+      }),
+    ];
+  }
+
+  const parts = geometry.coordinates as number[][][][];
+  return parts.map(
+    (rings) =>
+      new Polygon({
+        rings,
+        spatialReference: sr,
+      }),
+  );
+}
+
+function findGraphicAtPoint(
+  layer: GraphicsLayer,
+  mapPoint: Point,
+): Graphic | undefined {
+  for (const g of layer.graphics.toArray()) {
+    const geom = g.geometry as Polygon | undefined;
+    if (geom && geometryEngine.contains(geom, mapPoint)) {
+      return g;
+    }
+  }
+  return undefined;
+}
+
+function buildNeighbourhoodGraphics(
+  geojson: TorontoGeoJSON,
+  lookup: globalThis.Map<number, Neighbourhood>,
+  mode: ViewMode,
+  activeTiers: Set<Tier>,
+  hoverId: number | null,
+): { graphics: Graphic[]; byId: globalThis.Map<number, Graphic[]>; joined: number; skipped: number } {
+  const graphics: Graphic[] = [];
+  const byId = new globalThis.Map<number, Graphic[]>();
+  let joined = 0;
+  let skipped = 0;
+
+  for (const feature of geojson.features as TorontoFeature[]) {
+    const code = featureToNbId(feature.properties.AREA_SHORT_CODE);
+    const nb = lookup.get(code);
+    if (!nb) {
+      skipped += 1;
+      continue;
+    }
+    joined += 1;
+
+    const isHovered = nb.id === hoverId;
+    const { fill, outline, outlineWidth, opacity } = mapNeighbourhoodStyle(
+      nb.ebi,
+      nb.primaryKey,
+      nb.tier,
+      mode,
+      activeTiers,
+      isHovered,
+    );
+
+    const [r, g, b] = hexToEsriColor(fill.startsWith('#') ? fill : '#cccccc');
+    const symbol = new SimpleFillSymbol({
+      color: [r, g, b, Math.round(opacity * 255)],
+      outline: new SimpleLineSymbol({
+        color: outline,
+        width: outlineWidth,
+      }),
+    });
+
+    const attributes = {
+      nbId: nb.id,
+      name: nb.name,
+      ebi: nb.ebi,
+      tier: nb.tier,
+      tierLabel: TIER_LABELS[nb.tier].short,
+      rank: nb.rank,
+      program: nb.primaryName,
+    };
+
+    const nbGraphics: Graphic[] = [];
+    for (const polygon of polygonsFromFeature(feature)) {
+      const graphic = new Graphic({
+        geometry: polygon,
+        symbol,
+        attributes,
+      });
+      graphics.push(graphic);
+      nbGraphics.push(graphic);
+    }
+    byId.set(nb.id, nbGraphics);
+  }
+
+  return { graphics, byId, joined, skipped };
+}
+
+function hexToEsriColor(hex: string): [number, number, number] {
+  const h = hex.replace('#', '');
+  return [
+    parseInt(h.slice(0, 2), 16),
+    parseInt(h.slice(2, 4), 16),
+    parseInt(h.slice(4, 6), 16),
+  ];
 }
 
 export const EsriMapView: React.FC<MapViewProps> = ({
@@ -42,197 +166,237 @@ export const EsriMapView: React.FC<MapViewProps> = ({
   onSelectId,
   cimdOn,
 }) => {
-  const mapDivRef  = useRef<HTMLDivElement>(null);
-  const viewRef    = useRef<MapView | null>(null);
-  const layerRef   = useRef<GraphicsLayer | null>(null);
-  const cimdLayerRef = useRef<any>(null);
+  const mapDivRef = useRef<HTMLDivElement>(null);
+  const viewRef = useRef<MapView | null>(null);
+  const layerRef = useRef<GraphicsLayer | null>(null);
+  const highlightRef = useRef<GraphicsLayer | null>(null);
+  const cimdLayerRef = useRef<{ visible: boolean } | null>(null);
+  const onSelectIdRef = useRef(onSelectId);
+  const graphicsByIdRef = useRef<globalThis.Map<number, Graphic[]>>(new globalThis.Map());
+  const viewReadyRef = useRef(false);
+
+  const [hoverId, setHoverId] = useState<number | null>(null);
+  const [hoverScreen, setHoverScreen] = useState<{ x: number; y: number } | null>(null);
+  const [showHint, dismissHint] = useMapHint();
+
+  onSelectIdRef.current = onSelectId;
+
+  const selectedName = useMemo(
+    () => data.find((n) => n.id === selectedId)?.name ?? null,
+    [data, selectedId],
+  );
+
+  const hoverInfo: MapHoverInfo | null = useMemo(() => {
+    if (hoverId == null || !hoverScreen) return null;
+    const nb = data.find((n) => n.id === hoverId);
+    if (!nb) return null;
+    return {
+      name: nb.name,
+      tier: nb.tier,
+      ebi: nb.ebi,
+      x: hoverScreen.x,
+      y: hoverScreen.y,
+    };
+  }, [hoverId, hoverScreen, data]);
 
   // ── Initialise map once ────────────────────────────────────────────────────
   useEffect(() => {
     if (!mapDivRef.current || viewRef.current) return;
 
-    const nbLayer = new GraphicsLayer({ id: 'neighbourhoods', title: 'Neighbourhoods' });
+    const nbLayer = new GraphicsLayer({
+      id: 'neighbourhoods',
+      title: 'Neighbourhoods',
+    });
+    (nbLayer as GraphicsLayer & { popupEnabled: boolean }).popupEnabled = false;
+
+    const highlightLayer = new GraphicsLayer({
+      id: 'selection-highlight',
+      title: 'Selection',
+      listMode: 'hide',
+    });
+    (highlightLayer as GraphicsLayer & { popupEnabled: boolean }).popupEnabled = false;
+
     layerRef.current = nbLayer;
+    highlightRef.current = highlightLayer;
 
     const map = new EsriMap({
       basemap: 'gray-vector',
-      layers: [nbLayer],
+      layers: [nbLayer, highlightLayer],
     });
 
     const view = new MapView({
       container: mapDivRef.current,
       map,
-      center: [-79.38, 43.72],
-      zoom: 11,
-      ui: { components: ['zoom', 'compass'] },
-      popup: {
-        dockEnabled: true,
-        dockOptions: { position: 'bottom-right', breakpoint: false },
+      center: TORONTO_CENTER,
+      zoom: CITY_ZOOM,
+      constraints: {
+        minZoom: 9,
+        maxZoom: 18,
       },
+      ui: { components: ['zoom', 'compass'] },
+      popupEnabled: false,
     });
 
     viewRef.current = view;
+    viewReadyRef.current = false;
 
-    // Click handler — identify which neighbourhood was clicked
+    view.when(() => {
+      viewReadyRef.current = true;
+      view.closePopup();
+    });
+
+    const resolveGraphic = async (
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      event: any,
+    ): Promise<Graphic | undefined> => {
+      const response = await view.hitTest(event, { include: nbLayer });
+      const hit = response.results.find(
+        (r) => r.type === 'graphic' && r.graphic.layer === nbLayer,
+      );
+      if (hit?.type === 'graphic') return hit.graphic;
+      if (event.mapPoint) return findGraphicAtPoint(nbLayer, event.mapPoint);
+      return undefined;
+    };
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    view.on('click', (event: any) => {
-      view.hitTest(event).then((response) => {
-        const result = response.results.find(
-          (r) => r.type === 'graphic' && r.graphic.layer === nbLayer
-        );
-        if (result && result.type === 'graphic') {
-          const nbId: number | undefined = result.graphic.getAttribute('nbId');
-          onSelectId(nbId != null ? nbId : null);
-        } else {
-          onSelectId(null);
+    const moveHandle = view.on('pointer-move', async (event: any) => {
+      if (event.native?.buttons > 0) return;
+      const graphic = await resolveGraphic(event);
+      const container = view.container as HTMLElement;
+
+      if (graphic) {
+        const nbId = graphic.getAttribute('nbId') as number | undefined;
+        if (nbId != null) {
+          setHoverId(nbId);
+          setHoverScreen({ x: event.x, y: event.y });
+          container.style.cursor = 'pointer';
+          return;
         }
-      });
+      }
+      setHoverId(null);
+      setHoverScreen(null);
+      container.style.cursor = 'default';
+    });
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const clickHandle = view.on('click', async (event: any) => {
+      const graphic = await resolveGraphic(event);
+      if (graphic) {
+        const nbId = graphic.getAttribute('nbId') as number | undefined;
+        if (nbId != null) {
+          onSelectIdRef.current(nbId);
+          return;
+        }
+      }
+      onSelectIdRef.current(null);
     });
 
     return () => {
+      moveHandle.remove();
+      clickHandle.remove();
       view.destroy();
       viewRef.current = null;
       layerRef.current = null;
+      highlightRef.current = null;
+      viewReadyRef.current = false;
+      graphicsByIdRef.current.clear();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // only once
+  }, []);
 
-  // ── Render / re-render polygons when data, mode, tiers, selection change ──
+  // ── Choropleth graphics (after view is ready) ─────────────────────────────
   useEffect(() => {
     const layer = layerRef.current;
-    if (!layer || !geojson || data.length === 0) return;
+    const view = viewRef.current;
+    if (!layer || !view || !geojson || data.length === 0) return;
 
-    const lookup = buildLookup(data);
-    const graphics: Graphic[] = [];
+    let cancelled = false;
 
-    for (const feature of geojson.features as TorontoFeature[]) {
-      const code = parseInt(feature.properties.AREA_SHORT_CODE, 10);
-      const nb   = lookup.get(code);
-      if (!nb) continue;
+    const applyGraphics = () => {
+      if (cancelled) return;
 
-      const { fill, outline, opacity } = polygonColors(
-        nb.ebi,
-        nb.primaryKey,
-        nb.tier,
+      const lookup = buildLookup(data);
+      const { graphics, byId, joined, skipped } = buildNeighbourhoodGraphics(
+        geojson,
+        lookup,
         mode,
         activeTiers,
+        hoverId,
       );
 
-      // Highlight selected
-      const isSelected = nb.id === selectedId;
-      const outlineColor = isSelected ? '#1D4ED8' : outline;
-      const outlineWidth = isSelected ? 2.5 : 0.8;
+      console.log('[MapView] choropleth join:', {
+        joined,
+        skipped,
+        graphics: graphics.length,
+        sampleEbi: graphics[0]?.getAttribute('ebi'),
+        sampleFill: burdenColorHex(
+          (lookup.get(
+            graphics[0]?.getAttribute('nbId') as number,
+          )?.ebi) ?? 0,
+        ),
+      });
 
-      // Build geometry from GeoJSON
-      let polygon: Polygon;
-      if (feature.geometry.type === 'Polygon') {
-        polygon = new Polygon({
-          rings: feature.geometry.coordinates as number[][][],
-          spatialReference: { wkid: 4326 },
-        });
-      } else {
-        // MultiPolygon — flatten to single polygon (outer rings only)
-        const coords = feature.geometry.coordinates as number[][][][];
-        polygon = new Polygon({
-          rings: coords.flat(),
-          spatialReference: { wkid: 4326 },
-        });
+      layer.removeAll();
+      if (graphics.length > 0) {
+        layer.addMany(graphics);
       }
+      graphicsByIdRef.current = byId;
+    };
 
-      const symbol = new SimpleFillSymbol({
-        color: hexToRgba(fill, opacity),
-        outline: new SimpleLineSymbol({
-          color: outlineColor,
-          width: outlineWidth,
-        }),
-      });
-
-      const graphic = new Graphic({
-        geometry: polygon,
-        symbol,
-        attributes: {
-          nbId:       nb.id,
-          name:       nb.name,
-          ebi:        nb.ebi.toFixed(3),
-          tier:       nb.tier,
-          rank:       nb.rank,
-          program:    nb.primaryName,
-        },
-        popupTemplate: new PopupTemplate({
-          title: '{name}',
-          content: [
-            {
-              type: 'fields',
-              fieldInfos: [
-                { fieldName: 'rank',    label: 'Rank' },
-                { fieldName: 'ebi',     label: 'EBI Score' },
-                { fieldName: 'tier',    label: 'Tier' },
-                { fieldName: 'program', label: 'Primary Program' },
-              ],
-            },
-          ],
-        }),
-      });
-
-      graphics.push(graphic);
+    if (viewReadyRef.current) {
+      applyGraphics();
+    } else {
+      view.when().then(applyGraphics);
     }
 
-    layer.removeAll();
-    layer.addMany(graphics);
-  }, [data, geojson, mode, activeTiers, selectedId]);
+    return () => {
+      cancelled = true;
+    };
+  }, [data, geojson, mode, activeTiers, hoverId]);
 
-  // ── Zoom to selected neighbourhood ───────────────────────────────────────
+  // ── Selection outline only (never moves camera) ───────────────────────────
   useEffect(() => {
-    if (!viewRef.current || selectedId == null) return;
-    const layer = layerRef.current;
-    if (!layer) return;
+    const highlightLayer = highlightRef.current;
+    if (!highlightLayer) return;
 
-    const graphic = layer.graphics.find((g) => g.getAttribute('nbId') === selectedId);
-    if (graphic?.geometry) {
-      viewRef.current.goTo(
-        { target: graphic.geometry, zoom: 13 },
-        { duration: 600 }
-      );
-    }
+    highlightLayer.removeAll();
+    if (selectedId == null) return;
+
+    const parts = graphicsByIdRef.current.get(selectedId);
+    if (!parts?.length) return;
+
+    const highlightGraphics = parts.map(
+      (g) =>
+        new Graphic({
+          geometry: g.geometry,
+          symbol: new SimpleFillSymbol({
+            color: [0, 0, 0, 0],
+            outline: new SimpleLineSymbol({
+              color: MAP_STROKE_SELECTED,
+              width: 3,
+            }),
+          }),
+        }),
+    );
+
+    highlightLayer.addMany(highlightGraphics);
   }, [selectedId]);
 
-  // ── CIMD overlay (stub — Member 4 fills this in) ─────────────────────────
   useEffect(() => {
-    // Member 4: replace this stub with a real FeatureLayer from ArcGIS Living Atlas
-    // const cimdUrl = 'https://services.arcgis.com/.../...';
-    // if (cimdOn && !cimdLayerRef.current) { ... }
-    // if (!cimdOn && cimdLayerRef.current) { ... }
     if (cimdLayerRef.current) {
       cimdLayerRef.current.visible = cimdOn;
     }
   }, [cimdOn]);
 
   return (
-    <div
-      ref={mapDivRef}
-      className="flex-1 h-full"
-      style={{ position: 'relative' }}
-    />
+    <div className="map-shell">
+      <div ref={mapDivRef} className="map-canvas" />
+      <MapOverlay
+        mode={mode}
+        hover={hoverInfo}
+        selectedName={selectedName}
+        showHint={showHint}
+        onDismissHint={dismissHint}
+      />
+    </div>
   );
 };
-
-// ─── Helper: convert hex + opacity to [r,g,b,a] array for ArcGIS ─────────────
-function hexToRgba(color: string, opacity: number): [number, number, number, number] {
-  // Handle rgb(...) format from burdenColor()
-  const rgbMatch = color.match(/rgb\((\d+),(\d+),(\d+)\)/);
-  if (rgbMatch) {
-    return [
-      parseInt(rgbMatch[1]),
-      parseInt(rgbMatch[2]),
-      parseInt(rgbMatch[3]),
-      Math.round(opacity * 255),
-    ];
-  }
-
-  // Handle hex format
-  const hex = color.replace('#', '');
-  const r   = parseInt(hex.slice(0, 2), 16);
-  const g   = parseInt(hex.slice(2, 4), 16);
-  const b   = parseInt(hex.slice(4, 6), 16);
-  return [r, g, b, Math.round(opacity * 255)];
-}

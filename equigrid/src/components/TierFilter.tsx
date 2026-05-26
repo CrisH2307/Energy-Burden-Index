@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Tier } from '../types';
 import { TIER_COLORS } from '../data/constants';
+import { TIER_LABELS } from '../data/labels';
 
 interface TierFilterProps {
   activeTiers: Set<Tier>;
@@ -10,17 +11,10 @@ interface TierFilterProps {
 
 const ALL_TIERS: Tier[] = ['Critical', 'High', 'Moderate'];
 
-const TIER_ICONS: Record<Tier, string> = {
-  Critical: '🔴',
-  High: '🟠',
-  Moderate: '🟢',
-};
-
 export const TierFilter: React.FC<TierFilterProps> = ({ activeTiers, onChange, counts }) => {
   const toggle = (tier: Tier) => {
     const next = new Set(activeTiers);
     if (next.has(tier)) {
-      // Don't allow deselecting all
       if (next.size > 1) next.delete(tier);
     } else {
       next.add(tier);
@@ -28,41 +22,79 @@ export const TierFilter: React.FC<TierFilterProps> = ({ activeTiers, onChange, c
     onChange(next);
   };
 
+  const showOnly = (tier: Tier) => onChange(new Set([tier]));
+  const showAll = () => onChange(new Set(ALL_TIERS));
+
   return (
-    <div className="space-y-1.5">
-      <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider mb-2">
-        Filter by Tier
-      </p>
+    <div className="space-y-2">
+      <div className="flex items-center justify-between gap-2">
+        <p className="text-xs font-semibold text-[#64748B] uppercase tracking-wider">
+          Show on map
+        </p>
+        <button
+          type="button"
+          onClick={showAll}
+          className="text-xs font-medium text-[#0284C7] hover:underline"
+        >
+          Show all
+        </button>
+      </div>
+
+      <div className="flex gap-1.5">
+        <button
+          type="button"
+          onClick={() => showOnly('Critical')}
+          className="flex-1 text-[11px] font-semibold py-1.5 rounded-md border border-[#FECACA] bg-[#FEF2F2] text-[#991B1B] hover:bg-[#FEE2E2] transition-colors"
+        >
+          Urgent only
+        </button>
+      </div>
+
       {ALL_TIERS.map((tier) => {
         const active = activeTiers.has(tier);
         const colors = TIER_COLORS[tier];
+        const label = TIER_LABELS[tier];
+
         return (
-          <label
+          <button
             key={tier}
-            className={`flex items-center gap-2.5 px-3 py-2 rounded-lg cursor-pointer border transition-all duration-150 select-none ${
+            type="button"
+            onClick={() => toggle(tier)}
+            aria-pressed={active}
+            className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl border-2 text-left transition-all duration-150 ${
               active
-                ? 'border-transparent shadow-sm'
-                : 'border-[#E2E8F0] bg-white opacity-60 hover:opacity-80'
+                ? 'shadow-sm scale-[1.01]'
+                : 'opacity-50 hover:opacity-75 border-[#E2E8F0] bg-white'
             }`}
-            style={active ? { backgroundColor: colors.light, borderColor: colors.bg } : {}}
+            style={
+              active
+                ? {
+                    backgroundColor: colors.light,
+                    borderColor: colors.bg,
+                  }
+                : undefined
+            }
           >
-            <input
-              type="checkbox"
-              checked={active}
-              onChange={() => toggle(tier)}
-              className="rounded w-4 h-4 accent-[var(--tier-bg)] cursor-pointer"
-              style={{ accentColor: colors.bg }}
+            <span
+              className="w-5 h-5 rounded-md flex-shrink-0 border-2 border-white shadow-sm"
+              style={{ backgroundColor: colors.bg }}
+              aria-hidden
             />
-            <span className="text-sm">
-              {TIER_ICONS[tier]} {tier}
+            <span className="flex-1 min-w-0">
+              <span className="block text-sm font-bold text-[#0F172A]">
+                {label.short}
+              </span>
+              <span className="block text-[11px] text-[#64748B] leading-snug truncate">
+                {label.description}
+              </span>
             </span>
             <span
-              className="ml-auto text-xs font-semibold px-1.5 py-0.5 rounded-full"
-              style={{ backgroundColor: colors.bg, color: '#FFFFFF' }}
+              className="text-xs font-bold px-2 py-0.5 rounded-full flex-shrink-0"
+              style={{ backgroundColor: colors.bg, color: '#fff' }}
             >
               {counts[tier] ?? 0}
             </span>
-          </label>
+          </button>
         );
       })}
     </div>
