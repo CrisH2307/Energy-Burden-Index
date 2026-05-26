@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import type { Tier, ViewMode } from './types';
 import { useNeighbourhoods } from './hooks/useNeighbourhoods';
 import { Sidebar } from './components/Sidebar';
@@ -16,6 +16,15 @@ function App() {
   );
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [cimdOn, setCimdOn]         = useState(false);
+
+  // Clear selection when its tier is filtered off the map
+  useEffect(() => {
+    if (selectedId == null) return;
+    const selected = data.find((n) => n.id === selectedId);
+    if (selected && !activeTiers.has(selected.tier)) {
+      setSelectedId(null);
+    }
+  }, [activeTiers, selectedId, data]);
 
   // ── Selected neighbourhood ─────────────────────────────────────────────────
   const selectedNb = useMemo(

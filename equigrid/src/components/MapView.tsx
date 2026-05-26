@@ -172,6 +172,8 @@ export const EsriMapView: React.FC<MapViewProps> = ({
   const highlightRef = useRef<GraphicsLayer | null>(null);
   const cimdLayerRef = useRef<{ visible: boolean } | null>(null);
   const onSelectIdRef = useRef(onSelectId);
+  const activeTiersRef = useRef(activeTiers);
+  const lookupRef = useRef(buildLookup(data));
   const graphicsByIdRef = useRef<globalThis.Map<number, Graphic[]>>(new globalThis.Map());
   const viewReadyRef = useRef(false);
 
@@ -180,6 +182,13 @@ export const EsriMapView: React.FC<MapViewProps> = ({
   const [showHint, dismissHint] = useMapHint();
 
   onSelectIdRef.current = onSelectId;
+  activeTiersRef.current = activeTiers;
+  lookupRef.current = buildLookup(data);
+
+  const activeTierKey = useMemo(
+    () => [...activeTiers].sort().join(','),
+    [activeTiers],
+  );
 
   const selectedName = useMemo(
     () => data.find((n) => n.id === selectedId)?.name ?? null,
@@ -189,7 +198,7 @@ export const EsriMapView: React.FC<MapViewProps> = ({
   const hoverInfo: MapHoverInfo | null = useMemo(() => {
     if (hoverId == null || !hoverScreen) return null;
     const nb = data.find((n) => n.id === hoverId);
-    if (!nb) return null;
+    if (!nb || !activeTiers.has(nb.tier)) return null;
     return {
       name: nb.name,
       tier: nb.tier,
@@ -197,7 +206,17 @@ export const EsriMapView: React.FC<MapViewProps> = ({
       x: hoverScreen.x,
       y: hoverScreen.y,
     };
-  }, [hoverId, hoverScreen, data]);
+  }, [hoverId, hoverScreen, data, activeTiers]);
+
+  // Drop hover/selection when the hovered neighbourhood is filtered off
+  useEffect(() => {
+    if (hoverId == null) return;
+    const hovered = data.find((n) => n.id === hoverId);
+    if (hovered && !activeTiers.has(hovered.tier)) {
+      setHoverId(null);
+      setHoverScreen(null);
+    }
+  }, [activeTierKey, hoverId, data, activeTiers]);
 
   // ── Initialise map once ────────────────────────────────────────────────────
   useEffect(() => {
@@ -253,9 +272,22 @@ export const EsriMapView: React.FC<MapViewProps> = ({
       const hit = response.results.find(
         (r) => r.type === 'graphic' && r.graphic.layer === nbLayer,
       );
-      if (hit?.type === 'graphic') return hit.graphic;
-      if (event.mapPoint) return findGraphicAtPoint(nbLayer, event.mapPoint);
-      return undefined;
+      const graphic =
+        hit?.type === 'graphic'
+          ? hit.graphic
+          : event.mapPoint
+            ? findGraphicAtPoint(nbLayer, event.mapPoint)
+            : undefined;
+
+      if (!graphic) return undefined;
+
+      const nbId = graphic.getAttribute('nbId') as number | undefined;
+      if (nbId == null) return undefined;
+
+      const nb = lookupRef.current.get(nbId);
+      if (!nb || !activeTiersRef.current.has(nb.tier)) return undefined;
+
+      return graphic;
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -351,7 +383,7 @@ export const EsriMapView: React.FC<MapViewProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [data, geojson, mode, activeTiers, hoverId]);
+  }, [data, geojson, mode, activeTierKey, hoverId]);
 
   // ── Selection outline only (never moves camera) ───────────────────────────
   useEffect(() => {
@@ -360,6 +392,9 @@ export const EsriMapView: React.FC<MapViewProps> = ({
 
     highlightLayer.removeAll();
     if (selectedId == null) return;
+
+    const selected = data.find((n) => n.id === selectedId);
+    if (!selected || !activeTiers.has(selected.tier)) return;
 
     const parts = graphicsByIdRef.current.get(selectedId);
     if (!parts?.length) return;
@@ -379,7 +414,7 @@ export const EsriMapView: React.FC<MapViewProps> = ({
     );
 
     highlightLayer.addMany(highlightGraphics);
-  }, [selectedId]);
+  }, [selectedId, activeTierKey, data]);
 
   useEffect(() => {
     if (cimdLayerRef.current) {
