@@ -11,7 +11,7 @@
   <div style="width: 794px; height: auto; margin: 0 auto; background: #ffffff; position: relative; overflow: hidden;">
 
     <!-- TOP ACCENT BAR -->
-    <div style="height: 6px; background: linear-gradient(90deg, #c8102e 0%, #e63950 60%, #ff6b35 100%); width: 100%;"></div>
+    <div style="height: 6px; background-color: #c8102e; background-image: linear-gradient(90deg, #c8102e 0%, #e63950 60%, #ff6b35 100%); width: 100%;"></div>
 
     <!-- HEADER -->
     <div style="background: #1a1a2e; padding: 36px 48px 28px; position: relative; overflow: hidden;">
@@ -61,12 +61,11 @@
 
         <div style="width: 1px; height: 48px; background: #e5e7eb;"></div>
 
-        <!-- FIX 1: Tier badge with visible text centered inside colored pill -->
-        <div>
-          <div style="color: #6b7280; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">Tier</div>
-          <div style="background: {{tierBg}}; border: 1.5px solid {{tierBorder}}; border-radius: 20px; padding: 6px 16px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-width: 110px;">
-            <div style="width: 8px; height: 8px; border-radius: 50%; background: {{tierDot}}; flex-shrink: 0;"></div>
-            <span style="color: {{tierText}}; font-size: 13px; font-weight: 700; white-space: nowrap; line-height: 1;">{{tierLabel}}</span>
+        <!-- Tier badge (pre-rendered HTML: Urgent / Elevated / Moderate) -->
+        <div style="text-align: center;">
+          <div style="color: #6b7280; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin: 0;">Tier</div>
+          <div style="padding-top: 8px; text-align: center;">
+            {{tierBadgeHtml}}
           </div>
         </div>
 
@@ -74,16 +73,22 @@
     </div>
 
     <!-- BODY: 2-column grid -->
-    <div style="padding: 32px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+    <div style="padding: 32px 48px; display: flex; gap: 28px; align-items: flex-start; box-sizing: border-box;">
 
       <!-- LEFT COLUMN -->
-      <div>
+      <div style="flex: 1; min-width: 0;">
 
         <!-- Score Breakdown -->
         <div style="margin-bottom: 24px;">
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
-            <div style="width: 3px; height: 16px; background: #c8102e; border-radius: 2px;"></div>
-            <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #374151;">Score Breakdown</span>
+          <div style="margin-bottom: 14px;">
+            <table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse;">
+              <tr>
+                <td style="vertical-align: baseline; padding: 0 8px 0 0; font-size: 11px; line-height: 13px;">
+                  <div style="width: 3px; height: 11px; background-color: #c8102e; border-radius: 2px;"></div>
+                </td>
+                <td style="vertical-align: baseline; padding: 0; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #374151; line-height: 13px;">Score Breakdown</td>
+              </tr>
+            </table>
           </div>
 
           <!-- Income -->
@@ -133,103 +138,147 @@
           </div>
 
           <!-- Formula -->
-          <div style="margin-top: 12px; background: #f8f9fc; border: 1px solid #e5e7eb; border-radius: 6px; padding: 9px 12px;">
-            <div style="font-size: 10px; color: #6b7280; font-family: 'DM Mono', monospace; line-height: 1.5;">EBI = 0.35×Income + 0.25×Renter + 0.25×Consumption + 0.15×Age</div>
+          <div style="margin-top: 12px; background: #f8f9fc; border: 1px solid #e5e7eb; border-radius: 6px; padding: 12px; box-sizing: border-box;">
+            <div style="font-size: 10px; color: #6b7280; font-family: 'DM Mono', monospace; line-height: 1.6; margin: 0; padding: 0; text-align: center;">EBI = 0.35×Income + 0.25×Renter + 0.25×Consumption + 0.15×Age</div>
           </div>
         </div>
 
         <!-- Key Stats -->
         <div>
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
-            <div style="width: 3px; height: 16px; background: #c8102e; border-radius: 2px;"></div>
-            <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #374151;">Key Stats</span>
+          <div style="margin-bottom: 14px;">
+            <table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse;">
+              <tr>
+                <td style="vertical-align: baseline; padding: 0 8px 0 0; font-size: 11px; line-height: 13px;">
+                  <div style="width: 3px; height: 11px; background-color: #c8102e; border-radius: 2px;"></div>
+                </td>
+                <td style="vertical-align: baseline; padding: 0; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #374151; line-height: 13px;">Key Stats</td>
+              </tr>
+            </table>
           </div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-            <div style="background: #f8f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-              <div style="font-size: 10px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Est. kWh/yr</div>
-              <div style="font-size: 20px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace;">{{estKwh}}</div>
-            </div>
-            <div style="background: #f8f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-              <div style="font-size: 10px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Renter Share</div>
-              <div style="font-size: 20px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace;">{{renterPct}}%</div>
-            </div>
-            <div style="background: #f8f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 12px; grid-column: span 2; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-              <div style="font-size: 10px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Dominant Dwelling</div>
-              <div style="font-size: 15px; font-weight: 600; color: #111827;">{{dominantDwelling}}</div>
-            </div>
-          </div>
+          <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="border-collapse: separate; border-spacing: 0;">
+            <tr>
+              <td width="50%" style="padding: 0 5px 10px 0; vertical-align: top;">
+                <div style="background: #f8f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; box-sizing: border-box;">
+                  <div style="font-size: 10px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 8px 0; padding: 0; line-height: 1.3;">Est. kWh/yr</div>
+                  <div style="font-size: 20px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace; margin: 0; padding: 0; line-height: 1.2;">{{estKwh}}</div>
+                </div>
+              </td>
+              <td width="50%" style="padding: 0 0 10px 5px; vertical-align: top;">
+                <div style="background: #f8f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; box-sizing: border-box;">
+                  <div style="font-size: 10px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 8px 0; padding: 0; line-height: 1.3;">Renter Share</div>
+                  <div style="font-size: 20px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace; margin: 0; padding: 0; line-height: 1.2;">{{renterPct}}%</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="padding: 0; vertical-align: top;">
+                <div style="background: #f8f9fc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; text-align: center; box-sizing: border-box;">
+                  <div style="font-size: 10px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 8px 0; padding: 0; line-height: 1.3;">Dominant Dwelling</div>
+                  <div style="font-size: 15px; font-weight: 600; color: #111827; margin: 0; padding: 0; line-height: 1.3;">{{dominantDwelling}}</div>
+                </div>
+              </td>
+            </tr>
+          </table>
         </div>
 
       </div>
 
       <!-- RIGHT COLUMN -->
-      <div>
+      <div style="flex: 1; min-width: 0;">
 
         <!-- Recommended Programs -->
         <div style="margin-bottom: 24px;">
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
-            <div style="width: 3px; height: 16px; background: #c8102e; border-radius: 2px;"></div>
-            <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #374151;">Recommended Programs</span>
+          <div style="margin-bottom: 14px;">
+            <table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse;">
+              <tr>
+                <td style="vertical-align: baseline; padding: 0 8px 0 0; font-size: 11px; line-height: 13px;">
+                  <div style="width: 3px; height: 11px; background-color: #c8102e; border-radius: 2px;"></div>
+                </td>
+                <td style="vertical-align: baseline; padding: 0; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #374151; line-height: 13px;">Recommended Programs</td>
+              </tr>
+            </table>
           </div>
 
           <!-- FIX 2: Primary card — stacked label + name, properly centered -->
           <div style="border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; margin-bottom: 12px;">
-            <div style="background: {{primaryProgramColor}}; padding: 10px 14px;">
-              <div style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 9px; border-radius: 4px; margin-bottom: 5px;">Primary</div>
-              <div style="color: #fff; font-size: 13px; font-weight: 700; line-height: 1.3;">{{primaryProgramName}}</div>
+            <div style="background-color: {{primaryProgramColor}}; padding: 12px 14px; box-sizing: border-box;">
+              {{primaryRoleBadgeHtml}}
+              <div style="color: #ffffff; font-size: 13px; font-weight: 700; line-height: 1.35; margin: 0; padding: 0;">{{primaryProgramName}}</div>
             </div>
             <div style="padding: 12px 14px; background: #fff;">
               <div style="font-size: 11px; color: #6b7280; margin-bottom: 10px; line-height: 1.5;">{{primaryEligibility}}</div>
-              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;">
-                <div style="background: #f8f9fc; border-radius: 6px; padding: 10px 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                  <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Per HH/yr</div>
-                  <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace;">${{primaryBenefit}}</div>
-                </div>
-                <div style="background: #f8f9fc; border-radius: 6px; padding: 10px 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                  <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Eligible HHs</div>
-                  <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace;">{{primaryEligibleHH}}</div>
-                </div>
-                <div style="background: #f8f9fc; border-radius: 6px; padding: 10px 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                  <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Total/yr</div>
-                  <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace;">${{primaryTotalImpact}}</div>
-                </div>
-              </div>
+              <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="border-collapse: separate; border-spacing: 0;">
+                <tr>
+                  <td width="33%" style="padding: 0 3px 0 0; vertical-align: top;">
+                    <div style="background: #f8f9fc; border-radius: 6px; padding: 12px 8px; text-align: center; box-sizing: border-box;">
+                      <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; padding: 0; line-height: 1.2;">Per HH/yr</div>
+                      <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace; margin: 0; padding: 0; line-height: 1.2;">${{primaryBenefit}}</div>
+                    </div>
+                  </td>
+                  <td width="33%" style="padding: 0 3px; vertical-align: top;">
+                    <div style="background: #f8f9fc; border-radius: 6px; padding: 12px 8px; text-align: center; box-sizing: border-box;">
+                      <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; padding: 0; line-height: 1.2;">Eligible HHs</div>
+                      <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace; margin: 0; padding: 0; line-height: 1.2;">{{primaryEligibleHH}}</div>
+                    </div>
+                  </td>
+                  <td width="34%" style="padding: 0 0 0 3px; vertical-align: top;">
+                    <div style="background: #f8f9fc; border-radius: 6px; padding: 12px 8px; text-align: center; box-sizing: border-box;">
+                      <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; padding: 0; line-height: 1.2;">Total/yr</div>
+                      <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace; margin: 0; padding: 0; line-height: 1.2;">${{primaryTotalImpact}}</div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
 
           <!-- FIX 2: Secondary card — same fix -->
           <div style="border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden;">
-            <div style="background: {{secondaryProgramColor}}; padding: 10px 14px;">
-              <div style="display: inline-block; background: rgba(255,255,255,0.25); color: #fff; font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 9px; border-radius: 4px; margin-bottom: 5px;">Secondary</div>
-              <div style="color: #fff; font-size: 13px; font-weight: 700; line-height: 1.3;">{{secondaryProgramName}}</div>
+            <div style="background-color: {{secondaryProgramColor}}; padding: 12px 14px; box-sizing: border-box;">
+              {{secondaryRoleBadgeHtml}}
+              <div style="color: #ffffff; font-size: 13px; font-weight: 700; line-height: 1.35; margin: 0; padding: 0;">{{secondaryProgramName}}</div>
             </div>
             <div style="padding: 12px 14px; background: #fff;">
               <div style="font-size: 11px; color: #6b7280; margin-bottom: 10px; line-height: 1.5;">{{secondaryEligibility}}</div>
-              <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px;">
-                <div style="background: #f8f9fc; border-radius: 6px; padding: 10px 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                  <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Per HH/yr</div>
-                  <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace;">${{secondaryBenefit}}</div>
-                </div>
-                <div style="background: #f8f9fc; border-radius: 6px; padding: 10px 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                  <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Eligible HHs</div>
-                  <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace;">{{secondaryEligibleHH}}</div>
-                </div>
-                <div style="background: #f8f9fc; border-radius: 6px; padding: 10px 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-                  <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Total/yr</div>
-                  <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace;">${{secondaryTotalImpact}}</div>
-                </div>
-              </div>
+              <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="border-collapse: separate; border-spacing: 0;">
+                <tr>
+                  <td width="33%" style="padding: 0 3px 0 0; vertical-align: top;">
+                    <div style="background: #f8f9fc; border-radius: 6px; padding: 12px 8px; text-align: center; box-sizing: border-box;">
+                      <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; padding: 0; line-height: 1.2;">Per HH/yr</div>
+                      <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace; margin: 0; padding: 0; line-height: 1.2;">${{secondaryBenefit}}</div>
+                    </div>
+                  </td>
+                  <td width="33%" style="padding: 0 3px; vertical-align: top;">
+                    <div style="background: #f8f9fc; border-radius: 6px; padding: 12px 8px; text-align: center; box-sizing: border-box;">
+                      <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; padding: 0; line-height: 1.2;">Eligible HHs</div>
+                      <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace; margin: 0; padding: 0; line-height: 1.2;">{{secondaryEligibleHH}}</div>
+                    </div>
+                  </td>
+                  <td width="34%" style="padding: 0 0 0 3px; vertical-align: top;">
+                    <div style="background: #f8f9fc; border-radius: 6px; padding: 12px 8px; text-align: center; box-sizing: border-box;">
+                      <div style="font-size: 9px; color: #9ca3af; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 6px 0; padding: 0; line-height: 1.2;">Total/yr</div>
+                      <div style="font-size: 14px; font-weight: 700; color: #111827; font-family: 'DM Mono', monospace; margin: 0; padding: 0; line-height: 1.2;">${{secondaryTotalImpact}}</div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
 
         <!-- Projected Impact -->
         <div style="margin-bottom: 24px;">
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
-            <div style="width: 3px; height: 16px; background: #c8102e; border-radius: 2px;"></div>
-            <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #374151;">Projected Impact</span>
+          <div style="margin-bottom: 14px;">
+            <table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse;">
+              <tr>
+                <td style="vertical-align: baseline; padding: 0 8px 0 0; font-size: 11px; line-height: 13px;">
+                  <div style="width: 3px; height: 11px; background-color: #c8102e; border-radius: 2px;"></div>
+                </td>
+                <td style="vertical-align: baseline; padding: 0; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #374151; line-height: 13px;">Projected Impact</td>
+              </tr>
+            </table>
           </div>
-          <div style="background: linear-gradient(135deg, #1a1a2e 0%, #2d1f3d 100%); border-radius: 10px; padding: 20px; position: relative; overflow: hidden;">
+          <div style="background-color: #1a1a2e; background-image: linear-gradient(135deg, #1a1a2e 0%, #2d1f3d 100%); border-radius: 10px; padding: 20px; position: relative; overflow: hidden;">
             <div style="position: absolute; right: -20px; bottom: -20px; width: 100px; height: 100px; border-radius: 50%; background: rgba(200, 16, 46, 0.2);"></div>
             <div style="font-size: 11px; color: #9ca3af; margin-bottom: 8px;">At 30% eligible household enrollment:</div>
             <div style="font-size: 28px; font-weight: 700; color: #ffffff; font-family: 'DM Mono', monospace; margin-bottom: 6px;">${{projectedAmount}}</div>
@@ -239,9 +288,15 @@
 
         <!-- Data Sources -->
         <div>
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-            <div style="width: 3px; height: 16px; background: #c8102e; border-radius: 2px;"></div>
-            <span style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #374151;">Data Sources</span>
+          <div style="margin-bottom: 10px;">
+            <table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse;">
+              <tr>
+                <td style="vertical-align: baseline; padding: 0 8px 0 0; font-size: 11px; line-height: 13px;">
+                  <div style="width: 3px; height: 11px; background-color: #c8102e; border-radius: 2px;"></div>
+                </td>
+                <td style="vertical-align: baseline; padding: 0; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #374151; line-height: 13px;">Data Sources</td>
+              </tr>
+            </table>
           </div>
           <div style="font-size: 10px; color: #9ca3af; line-height: 1.8;">
             <div>· NRCan SHEU 2021 — electricity consumption by dwelling type</div>
