@@ -23,6 +23,12 @@ html, body, #root {
   width: 100%;
 }
 
+/* Suppress default ArcGIS popup chrome (custom tooltip + detail panel only) */
+.esri-view .esri-popup,
+.esri-view .esri-popup__main-container {
+  display: none !important;
+}
+
 /* Custom scrollbar for sidebar */
 .sidebar-scroll::-webkit-scrollbar {
   width: 4px;

@@ -117,13 +117,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
         </div>
       </div>
-
-      {/* Footer */}
-      <div className="px-4 py-3 border-t border-[#E2E8F0] flex-shrink-0">
-        <p className="text-[10px] text-[#94A3B8] text-center leading-relaxed">
-          Red areas = urgent need · Orange = elevated · Teal = moderate
-        </p>
-      </div>
     </aside>
   );
 };

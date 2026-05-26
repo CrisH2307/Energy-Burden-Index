@@ -23,32 +23,39 @@ export const DetailPanel: React.FC<DetailPanelProps> = ({ neighbourhood, onClose
   const secondaryImpact = Math.round(nb.eligible_households * nb.secondaryBenefit);
 
   return (
-    <aside className="w-96 flex flex-col h-full bg-white border-l border-[#E2E8F0] shadow-lg overflow-y-auto sidebar-scroll flex-shrink-0">
+    <aside className="w-96 flex flex-col h-full bg-white border-l border-[#E2E8F0] overflow-y-auto sidebar-scroll flex-shrink-0">
       {/* Header */}
       <div className="px-4 pt-4 pb-3 border-b border-[#E2E8F0] flex-shrink-0">
         <div className="flex items-start justify-between gap-2">
           <div className="flex-1 min-w-0">
             <h2 className="text-lg font-bold text-[#0F172A] leading-tight">{nb.name}</h2>
-            <div className="flex items-center gap-2 mt-1.5">
-              <span className="text-xs font-bold text-[#475569]">
-                RANK #{nb.rank}
-              </span>
-              <span
-                className="text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"
-                style={{ backgroundColor: tier.light, color: tier.text }}
-              >
-                {TIER_LABELS[nb.tier].short}
-              </span>
-            </div>
+            <span className="text-xs font-bold text-[#475569] mt-1.5 inline-block">
+              RANK #{nb.rank}
+            </span>
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Close detail panel"
-            className="flex-shrink-0 w-8 h-8 rounded-lg text-[#64748B] hover:bg-[#F1F5F9] hover:text-[#0F172A] transition-colors text-lg leading-none"
-          >
-            ✕
-          </button>
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <span
+              className="text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider"
+              style={{ backgroundColor: tier.light, color: tier.text }}
+            >
+              {TIER_LABELS[nb.tier].short}
+            </span>
+            <button
+              type="button"
+              onClick={() => exportBriefing(nb)}
+              className="text-xs font-semibold px-2.5 py-1 rounded-md border border-[#E2E8F0] text-[#0F172A] bg-white hover:bg-[#F8FAFC] transition-colors whitespace-nowrap"
+            >
+              Export Briefing
+            </button>
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close detail panel"
+              className="w-8 h-8 rounded-lg text-[#64748B] hover:bg-[#F1F5F9] hover:text-[#0F172A] transition-colors text-lg leading-none"
+            >
+              ✕
+            </button>
+          </div>
         </div>
 
         <div className="mt-4">
@@ -156,18 +163,6 @@ export const DetailPanel: React.FC<DetailPanelProps> = ({ neighbourhood, onClose
           </p>
         </div>
       </div>
-
-      {/* Export */}
-      <div className="px-4 py-4 flex-shrink-0">
-        <button
-          type="button"
-          onClick={() => exportBriefing(nb)}
-          className="w-full px-3 py-2.5 rounded-lg bg-[#0F172A] text-white text-sm font-semibold hover:bg-[#1E293B] transition-colors flex items-center justify-center gap-2"
-        >
-          <span>↓</span>
-          <span>Export Briefing</span>
-        </button>
-      </div>
     </aside>
   );
 };
@@ -182,7 +177,7 @@ const StatCard: React.FC<{ label: string; value: string }> = ({ label, value }) 
 );
 
 const EmptyState: React.FC = () => (
-  <aside className="w-96 flex flex-col h-full bg-white border-l border-[#E2E8F0] shadow-lg flex-shrink-0">
+  <aside className="w-96 flex flex-col h-full bg-white border-l border-[#E2E8F0] flex-shrink-0">
     <div className="flex-1 flex items-center justify-center px-6">
       <div className="text-center max-w-xs">
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#F1F5F9] flex items-center justify-center">
@@ -192,18 +187,8 @@ const EmptyState: React.FC = () => (
           Click a neighbourhood on the map
         </h3>
         <p className="text-xs text-[#64748B] leading-relaxed">
-          Lighter areas have lower energy burden; darker red areas have higher burden.
-          Click any polygon to open full details here.
-        </p>
-        <div
-          className="mt-4 h-3 rounded-full mx-auto max-w-[200px]"
-          style={{
-            background: 'linear-gradient(to right, #fff0f0, #b91c1c)',
-          }}
-        />
-        <p className="text-[10px] text-[#94A3B8] mt-1 flex justify-between max-w-[200px] mx-auto">
-          <span>Lower</span>
-          <span>Higher</span>
+          Click any coloured area on the map to see priority details and program
+          recommendations here.
         </p>
       </div>
     </div>

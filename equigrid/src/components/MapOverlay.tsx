@@ -53,13 +53,6 @@ export const MapOverlay: React.FC<MapOverlayProps> = ({
         </div>
       )}
 
-      {selectedName && (
-        <div className="map-selected-badge" role="status">
-          <span className="map-selected-dot" aria-hidden />
-          Viewing: <strong>{selectedName}</strong>
-        </div>
-      )}
-
       {hover && (
         <div
           className="map-hover-tooltip"
