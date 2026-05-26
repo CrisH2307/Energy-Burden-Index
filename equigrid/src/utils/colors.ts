@@ -10,6 +10,10 @@ export const MAP_STROKE_DEFAULT = '#666666';
 export const MAP_STROKE_HOVER = '#1a1a1a';
 export const MAP_STROKE_SELECTED = '#1e3a5f';
 
+/** Neutral styling for neighbourhoods filtered out of the active tier set */
+export const MAP_INACTIVE_FILL = '#E2E8F0';
+export const MAP_INACTIVE_OUTLINE = '#CBD5E1';
+
 /**
  * EBI choropleth fill as CSS rgb() — low #fff0f0 → high #b91c1c
  */
@@ -73,7 +77,12 @@ export function mapNeighbourhoodStyle(
     mode === 'burden' ? burdenColorHex(ebi) : programColor(primaryKey);
 
   if (!active) {
-    return { fill, outline: MAP_STROKE_DEFAULT, outlineWidth: 1.5, opacity: 0.3 };
+    return {
+      fill: MAP_INACTIVE_FILL,
+      outline: MAP_INACTIVE_OUTLINE,
+      outlineWidth: 1,
+      opacity: 0.45,
+    };
   }
   if (isHovered) {
     return { fill, outline: MAP_STROKE_HOVER, outlineWidth: 2.5, opacity: 1 };

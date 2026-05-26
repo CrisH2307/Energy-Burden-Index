@@ -64,7 +64,7 @@ export const TierFilter: React.FC<TierFilterProps> = ({ activeTiers, onChange, c
             className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl border-2 text-left transition-all duration-150 ${
               active
                 ? 'shadow-sm scale-[1.01]'
-                : 'opacity-50 hover:opacity-75 border-[#E2E8F0] bg-white'
+                : 'border-[#E2E8F0] bg-[#F8FAFC] hover:bg-[#F1F5F9]'
             }`}
             style={
               active
@@ -76,8 +76,10 @@ export const TierFilter: React.FC<TierFilterProps> = ({ activeTiers, onChange, c
             }
           >
             <span
-              className="w-5 h-5 rounded-md flex-shrink-0 border-2 border-white shadow-sm"
-              style={{ backgroundColor: colors.bg }}
+              className={`w-5 h-5 rounded-md flex-shrink-0 border-2 shadow-sm ${
+                active ? 'border-white' : 'border-[#E2E8F0]'
+              }`}
+              style={{ backgroundColor: active ? colors.bg : '#CBD5E1' }}
               aria-hidden
             />
             <span className="flex-1 min-w-0">
